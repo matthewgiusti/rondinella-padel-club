@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TorneiRouteImport } from './routes/tornei'
+import { Route as CorsiRouteImport } from './routes/corsi'
+import { Route as ContattiRouteImport } from './routes/contatti'
+import { Route as ClubRouteImport } from './routes/club'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TorneiRoute = TorneiRouteImport.update({
+  id: '/tornei',
+  path: '/tornei',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CorsiRoute = CorsiRouteImport.update({
+  id: '/corsi',
+  path: '/corsi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContattiRoute = ContattiRouteImport.update({
+  id: '/contatti',
+  path: '/contatti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClubRoute = ClubRouteImport.update({
+  id: '/club',
+  path: '/club',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/club': typeof ClubRoute
+  '/contatti': typeof ContattiRoute
+  '/corsi': typeof CorsiRoute
+  '/tornei': typeof TorneiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/club': typeof ClubRoute
+  '/contatti': typeof ContattiRoute
+  '/corsi': typeof CorsiRoute
+  '/tornei': typeof TorneiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/club': typeof ClubRoute
+  '/contatti': typeof ContattiRoute
+  '/corsi': typeof CorsiRoute
+  '/tornei': typeof TorneiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/club' | '/contatti' | '/corsi' | '/tornei'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/club' | '/contatti' | '/corsi' | '/tornei'
+  id: '__root__' | '/' | '/club' | '/contatti' | '/corsi' | '/tornei'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ClubRoute: typeof ClubRoute
+  ContattiRoute: typeof ContattiRoute
+  CorsiRoute: typeof CorsiRoute
+  TorneiRoute: typeof TorneiRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tornei': {
+      id: '/tornei'
+      path: '/tornei'
+      fullPath: '/tornei'
+      preLoaderRoute: typeof TorneiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/corsi': {
+      id: '/corsi'
+      path: '/corsi'
+      fullPath: '/corsi'
+      preLoaderRoute: typeof CorsiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contatti': {
+      id: '/contatti'
+      path: '/contatti'
+      fullPath: '/contatti'
+      preLoaderRoute: typeof ContattiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/club': {
+      id: '/club'
+      path: '/club'
+      fullPath: '/club'
+      preLoaderRoute: typeof ClubRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +121,21 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ClubRoute: ClubRoute,
+  ContattiRoute: ContattiRoute,
+  CorsiRoute: CorsiRoute,
+  TorneiRoute: TorneiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
