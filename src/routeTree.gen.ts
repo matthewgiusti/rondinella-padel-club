@@ -9,15 +9,21 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TorneiRouteImport } from './routes/tornei'
+import { Route as WheelchairRouteImport } from './routes/wheelchair'
+import { Route as NewsRouteImport } from './routes/news'
 import { Route as CorsiRouteImport } from './routes/corsi'
 import { Route as ContattiRouteImport } from './routes/contatti'
 import { Route as ClubRouteImport } from './routes/club'
 import { Route as IndexRouteImport } from './routes/index'
 
-const TorneiRoute = TorneiRouteImport.update({
-  id: '/tornei',
-  path: '/tornei',
+const WheelchairRoute = WheelchairRouteImport.update({
+  id: '/wheelchair',
+  path: '/wheelchair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsRoute = NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CorsiRoute = CorsiRouteImport.update({
@@ -46,14 +52,16 @@ export interface FileRoutesByFullPath {
   '/club': typeof ClubRoute
   '/contatti': typeof ContattiRoute
   '/corsi': typeof CorsiRoute
-  '/tornei': typeof TorneiRoute
+  '/news': typeof NewsRoute
+  '/wheelchair': typeof WheelchairRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/club': typeof ClubRoute
   '/contatti': typeof ContattiRoute
   '/corsi': typeof CorsiRoute
-  '/tornei': typeof TorneiRoute
+  '/news': typeof NewsRoute
+  '/wheelchair': typeof WheelchairRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -61,14 +69,22 @@ export interface FileRoutesById {
   '/club': typeof ClubRoute
   '/contatti': typeof ContattiRoute
   '/corsi': typeof CorsiRoute
-  '/tornei': typeof TorneiRoute
+  '/news': typeof NewsRoute
+  '/wheelchair': typeof WheelchairRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/club' | '/contatti' | '/corsi' | '/tornei'
+  fullPaths: '/' | '/club' | '/contatti' | '/corsi' | '/news' | '/wheelchair'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/club' | '/contatti' | '/corsi' | '/tornei'
-  id: '__root__' | '/' | '/club' | '/contatti' | '/corsi' | '/tornei'
+  to: '/' | '/club' | '/contatti' | '/corsi' | '/news' | '/wheelchair'
+  id:
+    | '__root__'
+    | '/'
+    | '/club'
+    | '/contatti'
+    | '/corsi'
+    | '/news'
+    | '/wheelchair'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,16 +92,24 @@ export interface RootRouteChildren {
   ClubRoute: typeof ClubRoute
   ContattiRoute: typeof ContattiRoute
   CorsiRoute: typeof CorsiRoute
-  TorneiRoute: typeof TorneiRoute
+  NewsRoute: typeof NewsRoute
+  WheelchairRoute: typeof WheelchairRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/tornei': {
-      id: '/tornei'
-      path: '/tornei'
-      fullPath: '/tornei'
-      preLoaderRoute: typeof TorneiRouteImport
+    '/wheelchair': {
+      id: '/wheelchair'
+      path: '/wheelchair'
+      fullPath: '/wheelchair'
+      preLoaderRoute: typeof WheelchairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news': {
+      id: '/news'
+      path: '/news'
+      fullPath: '/news'
+      preLoaderRoute: typeof NewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/corsi': {
@@ -124,7 +148,8 @@ const rootRouteChildren: RootRouteChildren = {
   ClubRoute: ClubRoute,
   ContattiRoute: ContattiRoute,
   CorsiRoute: CorsiRoute,
-  TorneiRoute: TorneiRoute,
+  NewsRoute: NewsRoute,
+  WheelchairRoute: WheelchairRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

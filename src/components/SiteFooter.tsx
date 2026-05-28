@@ -8,13 +8,13 @@ const WHATSAPP =
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-10 md:py-28">
-        <div className="grid gap-16 md:grid-cols-12">
+      <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-10 md:py-24">
+        <div className="grid gap-14 md:grid-cols-12">
           <div className="md:col-span-5">
             <Logo className="h-12 w-auto" />
             <p className="mt-8 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Un club di padel pensato per chi cerca un posto vero — campi curati, gente
-              autentica, partite che diventano abitudine.
+              Il padel a Firenze nord come dovrebbe essere: quattro campi, gente vera,
+              partite che diventano amicizie. Ti aspettiamo.
             </p>
             <div className="mt-10 flex items-center gap-3">
               <a
@@ -44,7 +44,8 @@ export function SiteFooter() {
               {[
                 ["/", "Home"],
                 ["/corsi", "Corsi & Lezioni"],
-                ["/tornei", "Tornei & Eventi"],
+                ["/wheelchair", "Wheelchair Padel"],
+                ["/news", "News & Tornei"],
                 ["/club", "Il Club"],
                 ["/contatti", "Contatti"],
               ].map(([to, label]) => (
@@ -61,14 +62,14 @@ export function SiteFooter() {
           </div>
 
           <div className="md:col-span-4">
-            <p className="eyebrow">Contatti</p>
+            <p className="eyebrow">Vieni a trovarci</p>
             <ul className="mt-6 space-y-4 text-sm text-foreground/80">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-brand" />
                 <span>
-                  Via della Rondinella 12
+                  Via della Rondinella, 50019
                   <br />
-                  20100 Milano, Italia
+                  Sesto Fiorentino · Firenze
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -87,9 +88,9 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 text-[11px] uppercase tracking-[0.22em] text-muted-foreground md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} Rondinella Padel Club</p>
-          <p>P.IVA 00000000000 — Tutti i diritti riservati</p>
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:flex-row md:items-center">
+          <p>© {new Date().getFullYear()} Rondinella Padel Club · Firenze</p>
+          <p>P.IVA 00000000000</p>
         </div>
       </div>
     </footer>

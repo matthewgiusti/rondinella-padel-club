@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Rondinella Padel Club — premium dark editorial design system */
+/* Rondinella Padel Club — sporty, warm, community-driven design system */
 
 @theme inline {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -26,6 +26,7 @@
   --color-border: var(--border);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
+  --color-brand-warm: var(--brand-warm);
   --color-primary: var(--brand);
   --color-primary-foreground: var(--brand-foreground);
   --color-accent: var(--brand);
@@ -43,16 +44,17 @@
 }
 
 :root {
-  /* Deep anthracite, warm yellow-gold (#F2B829), ivory white */
-  --background: #0a0a0a;
-  --surface: #121212;
-  --surface-2: #1a1a1a;
-  --foreground: #f4f1ea;
+  /* Anthracite + warm yellow from the swallow logo + ivory */
+  --background: #0d0d0d;
+  --surface: #161616;
+  --surface-2: #1d1d1d;
+  --foreground: #f5f2eb;
   --muted: #1f1f1f;
-  --muted-foreground: #8a8680;
-  --border: rgba(255, 255, 255, 0.08);
-  --brand: #f2b829;
-  --brand-foreground: #0a0a0a;
+  --muted-foreground: #9a958c;
+  --border: rgba(255, 255, 255, 0.09);
+  --brand: #f5c026;
+  --brand-warm: #ff8a1f;
+  --brand-foreground: #0d0d0d;
   --radius: 4px;
 }
 
@@ -72,7 +74,6 @@
     background-color: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
   }
 
   ::selection {
@@ -92,39 +93,24 @@
   .eyebrow {
     font-family: var(--font-sans);
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--brand);
   }
-  .editorial-rule {
-    height: 1px;
-    background: linear-gradient(
-      to right,
-      var(--brand) 0,
-      var(--brand) 48px,
-      var(--border) 48px,
-      var(--border) 100%
-    );
-  }
-  .grain {
-    position: relative;
-  }
-  .grain::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    opacity: 0.5;
-    mix-blend-mode: overlay;
+  .brand-underline {
+    background-image: linear-gradient(var(--brand), var(--brand));
+    background-repeat: no-repeat;
+    background-position: 0 92%;
+    background-size: 100% 14%;
+    padding: 0 0.05em;
   }
 }
 
 @keyframes fade-up {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -133,4 +119,12 @@
 }
 .animate-fade-up {
   animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-ticker {
+  animation: ticker 40s linear infinite;
 }

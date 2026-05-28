@@ -9,12 +9,14 @@ export const Route = createFileRoute("/corsi")({
   component: CoursesPage,
   head: () => ({
     meta: [
-      { title: "Corsi & Lezioni — Rondinella Padel Club" },
+      { title: "Corsi & Lezioni Padel — Firenze · Rondinella Padel Club" },
       {
         name: "description",
         content:
-          "Corsi di padel a Milano per principianti, intermedi e avanzati. Maestri qualificati, gruppi piccoli, percorsi personalizzati.",
+          "Corsi e lezioni di padel a Firenze: prova gratuita, corsi di gruppo, lezioni private. Tre maestri FITP, gruppi piccoli, percorsi per ogni livello.",
       },
+      { property: "og:title", content: "Corsi & Lezioni — Rondinella Padel Club" },
+      { property: "og:url", content: "/corsi" },
     ],
     links: [{ rel: "canonical", href: "/corsi" }],
   }),
@@ -28,44 +30,50 @@ function CoursesPage() {
     <PageShell>
       <PageHero
         eyebrow="Corsi & Lezioni"
-        title="Imparare il padel"
-        italicWord="sul serio."
-        description="Gruppi piccoli, maestri qualificati FIT-FIP, percorsi costruiti sul tuo livello. Dal primo colpo alla preparazione agonistica."
+        title="Iniziare è facile."
+        italicWord="Migliorare anche."
+        description="Tre maestri FITP, gruppi piccoli, un metodo costruito per farti tornare. Dal primo colpo al gioco di coppia, senza fretta e senza giudizio."
         image={lessonsImg}
       />
 
-      <section className="bg-background py-24 md:py-32">
+      <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 t: "Prova gratuita",
-                d: "Una lezione introduttiva di 45 minuti per capire se il padel fa per te.",
+                d: "45 minuti con un maestro per capire se il padel ti piace. Pala e palline incluse.",
                 p: "Gratis",
+                hl: true,
               },
               {
                 t: "Corso base",
-                d: "8 lezioni di gruppo (max 4 persone). Tecnica, regole, gioco di coppia.",
-                p: "280€",
+                d: "8 lezioni di gruppo (max 4). Tecnica, regole, primi scambi di coppia.",
+                p: "240€",
               },
               {
                 t: "Lezione privata",
-                d: "Sessione one-to-one con video analisi opzionale.",
-                p: "55€",
+                d: "Uno-a-uno con il maestro. Per partire da zero o limare i colpi.",
+                p: "50€",
               },
               {
                 t: "Pacchetto coppia",
-                d: "10 lezioni in due. Un percorso costruito insieme.",
-                p: "480€",
+                d: "10 lezioni in due. Lo stesso campo, lo stesso ritmo.",
+                p: "420€",
               },
-            ].map((c, i) => (
+            ].map((c) => (
               <div
                 key={c.t}
-                className={`flex flex-col justify-between border border-border bg-surface p-8 transition-colors hover:border-brand ${
-                  i === 0 ? "border-brand/40" : ""
+                className={`flex flex-col justify-between border bg-surface p-8 transition-colors hover:border-brand ${
+                  c.hl ? "border-brand" : "border-border"
                 }`}
               >
                 <div>
+                  {c.hl && (
+                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.22em] text-brand">
+                      Inizia da qui
+                    </p>
+                  )}
                   <h3 className="font-display text-2xl font-bold uppercase tracking-tight">
                     {c.t}
                   </h3>
@@ -74,7 +82,7 @@ function CoursesPage() {
                   </p>
                 </div>
                 <div className="mt-10 flex items-end justify-between border-t border-border pt-5">
-                  <span className="font-display text-2xl font-bold text-brand">
+                  <span className="font-display text-2xl font-black text-brand">
                     {c.p}
                   </span>
                   <a
@@ -100,11 +108,11 @@ function CoursesPage() {
           <div className="grid gap-16 md:grid-cols-12">
             <div className="md:col-span-5">
               <p className="eyebrow">Il metodo</p>
-              <h2 className="mt-6 font-display text-4xl font-bold uppercase leading-[1.02] tracking-tight md:text-5xl">
-                Tre principi,
+              <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+                Si impara
                 <br />
-                <span className="font-serif italic text-brand normal-case tracking-normal">
-                  zero scorciatoie
+                <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+                  giocando
                 </span>
                 .
               </h2>
@@ -113,26 +121,26 @@ function CoursesPage() {
               <ul className="space-y-6">
                 {[
                   [
-                    "Tecnica prima di tutto",
-                    "Si parte dai fondamentali, sempre. Anche con i giocatori avanzati.",
-                  ],
-                  [
                     "Gruppi piccoli, attenzione vera",
                     "Massimo 4 allievi per maestro. Ogni colpo viene visto e corretto.",
                   ],
                   [
-                    "Video analisi e progressione",
-                    "Strumenti professionali per misurare i tuoi miglioramenti, mese dopo mese.",
+                    "Tecnica + divertimento",
+                    "Si parte dai fondamentali, ma si gioca subito. Niente esercizi infiniti.",
                   ],
                   [
-                    "Maestri certificati FIT-FIP",
-                    "Tutto lo staff è composto da istruttori federali con esperienza agonistica.",
+                    "Maestri FITP certificati",
+                    "Tre tecnici federali con esperienza di insegnamento e di campo.",
+                  ],
+                  [
+                    "Percorsi su misura",
+                    "Principianti, donne, junior, agonisti: ogni livello ha il suo programma.",
                   ],
                 ].map(([t, d]) => (
                   <li key={t} className="flex gap-5 border-t border-border pt-6">
                     <Check className="mt-1 shrink-0 text-brand" size={18} />
                     <div>
-                      <h3 className="font-display text-lg font-semibold uppercase tracking-tight">
+                      <h3 className="font-display text-lg font-bold uppercase tracking-tight">
                         {t}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-foreground/70">
@@ -147,20 +155,16 @@ function CoursesPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-border bg-background py-28">
-        <img
-          src={racketImg}
-          alt=""
-          aria-hidden
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover opacity-15"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent" />
+      <section className="relative overflow-hidden border-t border-border bg-brand py-24 text-brand-foreground md:py-28">
         <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
-          <h2 className="max-w-3xl font-display text-3xl font-bold uppercase leading-[1] tracking-tight md:text-6xl">
-            Prenota la tua{" "}
-            <span className="font-serif italic text-brand normal-case tracking-normal">
-              prova gratuita
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em]">
+            Prima lezione gratuita
+          </p>
+          <h2 className="mt-6 max-w-3xl font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-6xl">
+            Vieni a provare.
+            <br />
+            <span className="font-serif italic font-normal normal-case tracking-normal">
+              Senza impegno
             </span>
             .
           </h2>
@@ -168,12 +172,19 @@ function CoursesPage() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-10 inline-flex items-center gap-3 bg-brand px-8 py-5 text-[12px] font-semibold uppercase tracking-[0.22em] text-brand-foreground hover:brightness-110"
+            className="mt-10 inline-flex items-center gap-3 bg-background px-8 py-5 text-[12px] font-semibold uppercase tracking-[0.22em] text-foreground hover:bg-foreground hover:text-background"
           >
             <MessageCircle size={16} />
-            Scrivici su WhatsApp
+            Prenota su WhatsApp
           </a>
         </div>
+        <img
+          src={racketImg}
+          alt=""
+          aria-hidden
+          loading="lazy"
+          className="pointer-events-none absolute right-0 top-0 hidden h-full w-1/3 object-cover opacity-20 mix-blend-multiply md:block"
+        />
       </section>
     </PageShell>
   );
