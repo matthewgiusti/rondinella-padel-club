@@ -6,7 +6,8 @@ import { Menu, X } from "lucide-react";
 const nav = [
   { to: "/", label: "Home" },
   { to: "/corsi", label: "Corsi & Lezioni" },
-  { to: "/tornei", label: "Tornei & Eventi" },
+  { to: "/wheelchair", label: "Wheelchair" },
+  { to: "/news", label: "News" },
   { to: "/club", label: "Il Club" },
   { to: "/contatti", label: "Contatti" },
 ];
@@ -34,8 +35,8 @@ export function SiteHeader() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled || open
-          ? "bg-background/85 backdrop-blur-xl border-b border-border"
-          : "bg-transparent"
+          ? "bg-background/90 backdrop-blur-xl border-b border-border"
+          : "bg-gradient-to-b from-background/70 to-transparent"
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:h-20 md:px-10">
@@ -43,7 +44,7 @@ export function SiteHeader() {
           <Logo className="h-9 w-auto md:h-10" />
         </Link>
 
-        <nav className="hidden items-center gap-9 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {nav.map((item) => {
             const active =
               item.to === "/"
@@ -53,13 +54,13 @@ export function SiteHeader() {
               <Link
                 key={item.to}
                 to={item.to}
-                className={`relative text-[12px] font-medium uppercase tracking-[0.22em] transition-colors ${
-                  active ? "text-brand" : "text-foreground/75 hover:text-foreground"
+                className={`relative text-[12px] font-semibold uppercase tracking-[0.18em] transition-colors ${
+                  active ? "text-brand" : "text-foreground/80 hover:text-foreground"
                 }`}
               >
                 {item.label}
                 {active && (
-                  <span className="absolute -bottom-2 left-0 right-0 mx-auto h-px w-4 bg-brand" />
+                  <span className="absolute -bottom-2 left-0 right-0 mx-auto h-px w-5 bg-brand" />
                 )}
               </Link>
             );
@@ -71,9 +72,9 @@ export function SiteHeader() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden bg-brand px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-foreground transition-all hover:brightness-110 md:inline-block"
+            className="hidden bg-brand px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground transition-all hover:brightness-110 md:inline-block"
           >
-            Prenota su WhatsApp
+            Scrivici su WhatsApp
           </a>
           <button
             type="button"
@@ -86,10 +87,9 @@ export function SiteHeader() {
         </div>
       </div>
 
-      {/* mobile menu */}
       <div
         className={`overflow-hidden border-t border-border bg-background/95 backdrop-blur-xl transition-[max-height] duration-500 lg:hidden ${
-          open ? "max-h-[480px]" : "max-h-0"
+          open ? "max-h-[560px]" : "max-h-0"
         }`}
       >
         <nav className="flex flex-col px-5 py-6">
@@ -97,7 +97,7 @@ export function SiteHeader() {
             <Link
               key={item.to}
               to={item.to}
-              className="border-b border-border/60 py-4 text-sm font-medium uppercase tracking-[0.22em] text-foreground/85"
+              className="border-b border-border/60 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-foreground/85"
             >
               {item.label}
             </Link>
@@ -106,9 +106,9 @@ export function SiteHeader() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center justify-center bg-brand px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-foreground"
+            className="mt-6 inline-flex items-center justify-center bg-brand px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground"
           >
-            Prenota su WhatsApp
+            Scrivici su WhatsApp
           </a>
         </nav>
       </div>

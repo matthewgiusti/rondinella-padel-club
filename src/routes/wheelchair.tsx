@@ -1,0 +1,171 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { PageShell } from "@/components/PageShell";
+import { PageHero } from "@/components/PageHero";
+import { Check, MessageCircle, ArrowRight } from "lucide-react";
+import communityImg from "@/assets/community.jpg";
+import courtImg from "@/assets/court.jpg";
+
+export const Route = createFileRoute("/wheelchair")({
+  component: WheelchairPage,
+  head: () => ({
+    meta: [
+      { title: "Wheelchair Padel a Firenze — Rondinella Padel Club" },
+      {
+        name: "description",
+        content:
+          "Wheelchair padel a Firenze: campi accessibili, istruttori formati, gruppi misti. Lo sport è di tutti, davvero.",
+      },
+      { property: "og:title", content: "Wheelchair Padel — Rondinella Padel Club" },
+      { property: "og:url", content: "/wheelchair" },
+    ],
+    links: [{ rel: "canonical", href: "/wheelchair" }],
+  }),
+});
+
+const WHATSAPP =
+  "https://wa.me/393000000000?text=Ciao%2C%20vorrei%20informazioni%20sul%20wheelchair%20padel";
+
+function WheelchairPage() {
+  return (
+    <PageShell>
+      <PageHero
+        eyebrow="Wheelchair Padel"
+        title="Lo sport"
+        italicWord="è di tutti."
+        description="Al Rondinella il wheelchair padel è una parte vera del club. Campi accessibili, istruttori dedicati e una community che gioca insieme."
+        image={communityImg}
+      />
+
+      <section className="bg-background py-24 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <div className="grid gap-16 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="eyebrow">Cos'è</p>
+              <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+                Stesso campo.
+                <br />
+                <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+                  Stesso gioco
+                </span>
+                .
+              </h2>
+            </div>
+            <div className="md:col-span-7 space-y-6 text-base leading-relaxed text-foreground/85 md:text-lg">
+              <p>
+                Il wheelchair padel si gioca sugli stessi campi del padel tradizionale,
+                con regole leggermente adattate. Al Rondinella organizziamo lezioni
+                individuali, sessioni di gruppo e partite miste — perché giocare insieme
+                è il punto.
+              </p>
+              <p className="text-foreground/70">
+                I nostri campi sono accessibili dall'ingresso fino agli spogliatoi.
+                Sedie sportive disponibili in prova per chi vuole iniziare senza
+                attrezzatura propria.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-surface py-20 md:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <p className="eyebrow">Il programma</p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                t: "Lezione introduttiva",
+                d: "Una sessione individuale con un istruttore formato. Per provare, capire, vedere come ci si sente in campo.",
+                p: "Gratis",
+              },
+              {
+                t: "Corso settimanale",
+                d: "Un appuntamento fisso a settimana, in piccolo gruppo. Tecnica, mobilità, partite.",
+                p: "Su richiesta",
+              },
+              {
+                t: "Partite miste",
+                d: "Sessioni di gioco con altri soci del club. Per chi gioca da tempo e cerca compagni.",
+                p: "Aperte",
+              },
+            ].map((c) => (
+              <div
+                key={c.t}
+                className="flex flex-col border border-border bg-background p-8 transition-colors hover:border-brand"
+              >
+                <h3 className="font-display text-xl font-bold uppercase tracking-tight">
+                  {c.t}
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/70">
+                  {c.d}
+                </p>
+                <div className="mt-8 border-t border-border pt-5 font-display text-sm font-bold text-brand">
+                  {c.p}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <ul className="mt-16 grid gap-5 md:grid-cols-2">
+            {[
+              "Campi accessibili dall'ingresso agli spogliatoi",
+              "Istruttori formati al wheelchair padel",
+              "Sedie sportive disponibili in prova",
+              "Gruppi misti aperti a tutti i soci",
+            ].map((p) => (
+              <li
+                key={p}
+                className="flex items-start gap-4 border-t border-border pt-5 text-sm text-foreground/85"
+              >
+                <Check className="mt-0.5 shrink-0 text-brand" size={18} />
+                {p}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-background">
+        <div className="grid md:grid-cols-2">
+          <div className="relative min-h-[360px] md:min-h-[560px]">
+            <img
+              src={courtImg}
+              alt="Campo accessibile al Rondinella"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+          <div className="flex items-center bg-brand px-5 py-20 text-brand-foreground md:px-16">
+            <div className="max-w-lg">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em]">
+                Vieni a provare
+              </p>
+              <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+                Scrivici.
+                <br />
+                <span className="font-serif italic font-normal normal-case tracking-normal">
+                  Organizziamo tutto noi
+                </span>
+                .
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-brand-foreground/80">
+                Ti aspettiamo per una lezione introduttiva gratuita. Bastano una
+                telefonata o un messaggio: decidiamo insieme orario, istruttore e
+                attrezzatura.
+              </p>
+              <a
+                href={WHATSAPP}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-3 bg-background px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-foreground hover:bg-foreground hover:text-background"
+              >
+                <MessageCircle size={16} />
+                Scrivici su WhatsApp
+                <ArrowRight size={14} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </PageShell>
+  );
+}

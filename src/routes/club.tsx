@@ -3,18 +3,20 @@ import { PageShell } from "@/components/PageShell";
 import { PageHero } from "@/components/PageHero";
 import clubImg from "@/assets/club-exterior.jpg";
 import courtImg from "@/assets/court.jpg";
-import racketImg from "@/assets/racket-detail.jpg";
+import communityImg from "@/assets/community.jpg";
 
 export const Route = createFileRoute("/club")({
   component: ClubPage,
   head: () => ({
     meta: [
-      { title: "Il Club — Rondinella Padel Club" },
+      { title: "Il Club — Rondinella Padel Club · Firenze" },
       {
         name: "description",
         content:
-          "Storia, valori e struttura del Rondinella Padel Club: un club di padel a Milano costruito attorno alla community.",
+          "Quattro campi, tre maestri FITP, una community che gioca insieme. Storia, valori e struttura del Rondinella Padel Club di Firenze nord.",
       },
+      { property: "og:title", content: "Il Club — Rondinella Padel Club" },
+      { property: "og:url", content: "/club" },
     ],
     links: [{ rel: "canonical", href: "/club" }],
   }),
@@ -26,8 +28,8 @@ function ClubPage() {
       <PageHero
         eyebrow="Il Club"
         title="Un posto"
-        italicWord="che è anche casa."
-        description="Rondinella nasce nel 2019 da un gruppo di amici e una convinzione: il padel non è solo uno sport, è un modo di stare insieme."
+        italicWord="dove tornare."
+        description="Sport, amici, famiglia. Tre parole semplici che raccontano davvero come si vive il Rondinella ogni giorno."
         image={clubImg}
       />
 
@@ -35,38 +37,41 @@ function ClubPage() {
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <div className="grid gap-16 md:grid-cols-12">
             <div className="md:col-span-5">
-              <p className="eyebrow">La storia</p>
-              <h2 className="mt-6 font-display text-3xl font-bold uppercase leading-[1.02] tracking-tight md:text-5xl">
-                Sei anni di
+              <p className="eyebrow">Chi siamo</p>
+              <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+                Un club aperto.
                 <br />
-                <span className="font-serif italic text-brand normal-case tracking-normal">
-                  partite
-                </span>{" "}
-                vere.
+                <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+                  A tutti
+                </span>
+                .
               </h2>
             </div>
-            <div className="md:col-span-7 space-y-6 text-base leading-relaxed text-foreground/80 md:text-lg">
+            <div className="md:col-span-7 space-y-6 text-base leading-relaxed text-foreground/85 md:text-lg">
               <p>
-                Abbiamo aperto con due campi e l'idea di non vendere mai un'ora al
-                miglior offerente. Volevamo un club: gente che torna, che si conosce,
-                che organizza la partita del giovedì da sola.
+                Rondinella è uno sport club di Firenze nord dove al centro ci sono le
+                persone, non l'infrastruttura. Sì, abbiamo quattro campi belli, tre
+                maestri federali e una struttura comoda — ma il vero motivo per cui la
+                gente torna è l'aria che si respira.
               </p>
-              <p>
-                Sei anni dopo i campi sono quattro, i soci più di mille, ma la regola è
-                rimasta. Si entra come ospiti. Si esce come parte di qualcosa.
+              <p className="text-foreground/70">
+                Non ci interessa fare il club esclusivo. Ci interessa essere il club del
+                quartiere: quello dove un trentenne ex-calciatore, una signora che ha
+                ripreso a muoversi, uno studente universitario e una famiglia con i
+                ragazzini si trovano la stessa sera e finiscono al bar insieme.
               </p>
             </div>
           </div>
 
-          <div className="mt-24 grid gap-6 md:grid-cols-4">
+          <div className="mt-20 grid gap-px bg-border md:grid-cols-4">
             {[
-              ["2019", "Apertura"],
-              ["04", "Campi"],
-              ["1.200+", "Soci"],
-              ["38", "Tornei l'anno"],
+              ["04", "Campi totali"],
+              ["03", "Coperti"],
+              ["03", "Maestri FITP"],
+              ["7/7", "Giorni aperti"],
             ].map(([n, l]) => (
-              <div key={l} className="border-t border-border pt-6">
-                <div className="font-display text-4xl font-bold text-brand md:text-5xl">
+              <div key={l} className="bg-background p-8">
+                <div className="font-display text-4xl font-black text-brand md:text-5xl">
                   {n}
                 </div>
                 <div className="mt-3 text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
@@ -78,12 +83,12 @@ function ClubPage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-surface py-0">
+      <section className="border-t border-border bg-surface">
         <div className="grid md:grid-cols-2">
           <div className="relative min-h-[420px] md:min-h-[640px]">
             <img
               src={courtImg}
-              alt="Interno campo da padel"
+              alt="Campo da padel coperto al Rondinella Padel Club"
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -91,21 +96,22 @@ function ClubPage() {
           <div className="flex items-center px-5 py-20 md:px-16">
             <div className="max-w-lg">
               <p className="eyebrow">La struttura</p>
-              <h2 className="mt-6 font-display text-3xl font-bold uppercase leading-[1.02] tracking-tight md:text-5xl">
-                Tutto ciò che serve.
+              <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+                Tutto a portata
                 <br />
-                <span className="font-serif italic text-brand normal-case tracking-normal">
-                  Niente di più
+                <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+                  di mano
                 </span>
                 .
               </h2>
               <ul className="mt-10 space-y-5 text-sm text-foreground/85">
                 {[
-                  "3 campi indoor panoramici + 1 outdoor coperto",
-                  "Spogliatoi con docce private e prodotti dedicati",
-                  "Pro shop con noleggio e prova racchette",
-                  "Bar e cucina con piatti leggeri post-partita",
-                  "Parcheggio gratuito riservato ai soci",
+                  "3 campi indoor + 1 campo semi-coperto",
+                  "Spogliatoi maschili e femminili con docce",
+                  "Bar interno al circolo",
+                  "Ristorante all'interno del complesso sportivo",
+                  "Parcheggio ampio nelle immediate vicinanze",
+                  "Centro commerciale a pochi minuti",
                 ].map((p) => (
                   <li
                     key={p}
@@ -123,63 +129,109 @@ function ClubPage() {
 
       <section className="border-t border-border bg-background py-24 md:py-32">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <p className="eyebrow">Lo staff</p>
-          <h2 className="mt-6 font-display text-3xl font-bold uppercase leading-[1.02] tracking-tight md:text-5xl">
-            Le persone del club
+          <p className="eyebrow">I valori</p>
+          <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+            Tre cose
+            <br />
+            <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+              non negoziabili
+            </span>
+            .
           </h2>
 
-          <div className="mt-16 grid gap-10 md:grid-cols-3">
+          <div className="mt-14 grid gap-8 md:grid-cols-3">
             {[
               {
-                n: "Marco Sereni",
-                r: "Head Coach · FIT-FIP",
-                d: "15 anni di tennis, 8 di padel. Allena la prima squadra del club.",
+                n: "01",
+                t: "Accessibilità",
+                d: "Tutti possono giocare: principianti, esperti, giovani, meno giovani, in piedi o in carrozzina. Nessuno qui si sente fuori posto.",
               },
               {
-                n: "Lucia Bertelli",
-                r: "Maestra junior & women",
-                d: "Specializzata nei corsi femminili e giovanili. Ex giocatrice serie B.",
+                n: "02",
+                t: "Community",
+                d: "I tornei sociali, le americane, le serate al bar: organizziamo occasioni perché la gente si conosca, non solo perché paghi un'ora di campo.",
               },
               {
-                n: "Daniele Conte",
-                r: "Direttore sportivo",
-                d: "Organizza tornei, leghe e tutta la vita interna del club.",
+                n: "03",
+                t: "Sport vero",
+                d: "Maestri certificati, campi mantenuti bene, attrezzatura aggiornata. Si gioca seriamente, anche quando si ride.",
               },
-            ].map((p) => (
-              <article
-                key={p.n}
+            ].map((c) => (
+              <div
+                key={c.n}
                 className="border-t border-border pt-8 transition-colors hover:border-brand"
               >
-                <h3 className="font-display text-2xl font-bold uppercase tracking-tight">
-                  {p.n}
+                <div className="font-display text-sm font-bold text-brand">{c.n}</div>
+                <h3 className="mt-5 font-display text-2xl font-bold uppercase tracking-tight">
+                  {c.t}
                 </h3>
-                <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-brand">
+                <p className="mt-4 text-sm leading-relaxed text-foreground/70">{c.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-surface py-24 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <p className="eyebrow">Lo staff</p>
+          <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+            Tre maestri.
+            <br />
+            <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+              Un'unica idea di insegnamento
+            </span>
+            .
+          </h2>
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
+            Tutti e tre certificati FITP, tutti e tre convinti che si insegna meglio
+            quando si crea un ambiente in cui gli allievi vogliono tornare. Tecnica
+            seria, atmosfera leggera.
+          </p>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {[
+              {
+                r: "Head Coach FITP",
+                d: "Coordina il settore corsi e segue gli allievi avanzati e agonisti.",
+              },
+              {
+                r: "Maestra FITP · settore donne & junior",
+                d: "Specializzata nei gruppi femminili, junior e nei percorsi di avviamento.",
+              },
+              {
+                r: "Maestro FITP · adulti & wheelchair",
+                d: "Lavora con principianti, gruppi adulti e con il programma di wheelchair padel.",
+              },
+            ].map((p, i) => (
+              <article
+                key={i}
+                className="border border-border bg-background p-8 transition-colors hover:border-brand"
+              >
+                <p className="text-[10px] uppercase tracking-[0.22em] text-brand">
                   {p.r}
                 </p>
-                <p className="mt-5 text-sm leading-relaxed text-foreground/70">
-                  {p.d}
-                </p>
+                <p className="mt-5 text-sm leading-relaxed text-foreground/70">{p.d}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-t border-border bg-surface py-28">
+      <section className="relative overflow-hidden border-t border-border bg-brand py-24 text-brand-foreground md:py-28">
         <img
-          src={racketImg}
+          src={communityImg}
           alt=""
           aria-hidden
           loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover opacity-20"
+          className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-multiply"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
-          <h2 className="max-w-3xl font-serif text-3xl italic leading-snug text-foreground md:text-5xl">
-            "Non costruiamo un centro sportivo. Costruiamo un'abitudine."
+          <h2 className="max-w-3xl font-serif text-3xl italic leading-snug md:text-5xl">
+            "Qui non ci si sente ospiti. Ci si sente del posto."
           </h2>
-          <p className="mt-6 text-[11px] uppercase tracking-[0.22em] text-brand">
-            — I fondatori
+          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.22em]">
+            — Un socio, una sera qualsiasi
           </p>
         </div>
       </section>

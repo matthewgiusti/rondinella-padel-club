@@ -15,16 +15,16 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Pagina non trovata</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          La pagina che cerchi non esiste o è stata spostata.
         </p>
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center bg-brand px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-foreground transition-colors hover:brightness-110"
           >
-            Go home
+            Torna alla home
           </Link>
         </div>
       </div>
@@ -40,10 +40,10 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          Qualcosa non ha funzionato
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Riprova o torna alla home — siamo a un messaggio di distanza.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -51,15 +51,15 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center bg-brand px-4 py-2 text-sm font-semibold text-brand-foreground transition-colors hover:brightness-110"
           >
-            Try again
+            Riprova
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center border border-border bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand"
           >
-            Go home
+            Home
           </a>
         </div>
       </div>
@@ -76,25 +76,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "width=device-width, initial-scale=1, viewport-fit=cover",
       },
       { name: "theme-color", content: "#0a0a0a" },
-      { title: "Rondinella Padel Club — Padel a Milano" },
+      { title: "Rondinella Padel Club — Padel a Firenze e Scandicci" },
       {
         name: "description",
         content:
-          "Rondinella Padel Club: campi premium, corsi, tornei e una community vera di padel a Milano. Prenota la tua partita.",
+          "Padel a Firenze nord: 4 campi (3 coperti + 1 semi-coperto), corsi per tutti i livelli, wheelchair padel, tornei FITP e una community che ti fa sentire a casa.",
       },
-      { property: "og:title", content: "Rondinella Padel Club" },
+      { property: "og:title", content: "Rondinella Padel Club — Firenze" },
       {
         property: "og:description",
         content:
-          "Un club di padel autentico — atmosfera, campi curati, lezioni e tornei. Milano.",
+          "Quattro campi, tre maestri FITP, lezioni, tornei e wheelchair padel. Il club di padel di Firenze nord.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Rondinella Padel Club" },
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "canonical", href: "/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
         rel: "preconnect",
@@ -103,7 +103,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SportsClub",
+          name: "Rondinella Padel Club",
+          sport: "Padel",
+          areaServed: ["Firenze", "Scandicci", "Sesto Fiorentino"],
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Via della Rondinella",
+            postalCode: "50019",
+            addressLocality: "Sesto Fiorentino",
+            addressRegion: "FI",
+            addressCountry: "IT",
+          },
+        }),
       },
     ],
   }),
@@ -115,7 +135,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="it">
       <head>
         <HeadContent />
       </head>
