@@ -13,7 +13,7 @@ export const Route = createFileRoute("/wheelchair")({
       {
         name: "description",
         content:
-          "Wheelchair padel a Firenze: campi accessibili, istruttori formati, gruppi misti. Lo sport è di tutti, davvero.",
+          "Wheelchair padel a Firenze dal 2023: campi accessibili, istruttori formati e carrozzine dedicate. Progetto premiato dalla FITP come Miglior Progetto Sociale in Toscana 2023.",
       },
       { property: "og:title", content: "Wheelchair Padel — Rondinella Padel Club" },
       { property: "og:url", content: "/wheelchair" },
@@ -53,16 +53,21 @@ function WheelchairPage() {
             </div>
             <div className="md:col-span-7 space-y-6 text-base leading-relaxed text-foreground/85 md:text-lg">
               <p>
-                Il wheelchair padel si gioca sugli stessi campi del padel tradizionale,
-                con regole leggermente adattate. Al Rondinella organizziamo lezioni
-                individuali, sessioni di gruppo e partite miste — perché giocare insieme
-                è il punto.
+                Dal <strong className="font-semibold text-foreground">settembre 2023</strong>,
+                con il Progetto Wheelchair abbiamo aperto le porte del padel alle persone
+                con disabilità motoria, convinti che questo sport possa abbattere ogni
+                barriera. Si gioca sugli stessi campi del padel tradizionale, con regole
+                leggermente adattate.
               </p>
               <p className="text-foreground/70">
-                I nostri campi sono accessibili dall'ingresso fino agli spogliatoi.
-                Sedie sportive disponibili in prova per chi vuole iniziare senza
-                attrezzatura propria.
+                Organizziamo lezioni individuali, sessioni di gruppo e partite miste —
+                perché giocare insieme è il punto. I campi sono accessibili dall'ingresso
+                fino agli spogliatoi e mettiamo a disposizione carrozzine da padel
+                dedicate, in prova per chi vuole iniziare senza attrezzatura propria.
+                Insieme a ConsorzioBlu e al Gruppo Sportivo Unità Spinale accompagniamo
+                anche chi vuole arrivare all'agonismo.
               </p>
+
             </div>
           </div>
         </div>
@@ -124,6 +129,85 @@ function WheelchairPage() {
           </ul>
         </div>
       </section>
+
+      <section className="border-t border-border bg-background py-24 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <p className="eyebrow">I traguardi</p>
+          <h2 className="mt-6 max-w-2xl font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+            Un progetto
+            <br />
+            <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+              che cresce
+            </span>
+            .
+          </h2>
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
+            In pochi anni il Progetto Wheelchair è diventato un punto di riferimento
+            per l'inclusione attraverso lo sport. Vogliamo continuare a crescere e a
+            ispirare altri club, perché il padel sia davvero uno sport per tutti.
+          </p>
+
+          <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
+            {[
+              ["5+", "Open Day organizzati"],
+              ["20", "Atleti al primo Torneo Misto Wheelchair"],
+              ["2023", "Miglior Progetto Sociale in Toscana — FITP"],
+            ].map(([n, l]) => (
+              <div key={l} className="bg-background p-8">
+                <div className="font-display text-4xl font-black text-brand md:text-5xl">
+                  {n}
+                </div>
+                <div className="mt-3 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+                  {l}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-surface py-24 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <div className="grid gap-16 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="eyebrow">Insieme a noi</p>
+              <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+                I partner
+                <br />
+                <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+                  del progetto
+                </span>
+                .
+              </h2>
+              <p className="mt-8 text-base leading-relaxed text-foreground/75">
+                Il Progetto Wheelchair esiste grazie alla collaborazione con realtà
+                che credono nello sport come strumento di inclusione e aggregazione.
+              </p>
+            </div>
+            <div className="md:col-span-7">
+              <ul className="grid gap-px bg-border sm:grid-cols-2">
+                {[
+                  "Spingi la Vita Onlus",
+                  "Fondazione Decathlon",
+                  "Decathlon Italia",
+                  "Rotary Club Firenze Est",
+                  "Gabriele Borgogni Onlus",
+                  "ConsorzioBlu",
+                  "Gruppo Sportivo Unità Spinale",
+                ].map((p) => (
+                  <li
+                    key={p}
+                    className="bg-surface p-6 text-sm font-semibold uppercase tracking-tight text-foreground/85"
+                  >
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section className="border-t border-border bg-background">
         <div className="grid md:grid-cols-2">
