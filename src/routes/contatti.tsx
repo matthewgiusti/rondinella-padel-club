@@ -174,12 +174,40 @@ function ContactPage() {
             </div>
 
             <div className="md:col-span-7">
+              <div className="mb-6 flex flex-wrap gap-3">
+                <a
+                  href={GOOGLE_DIRECTIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-brand px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground transition-all hover:brightness-110"
+                >
+                  <Navigation size={14} />
+                  Indicazioni Google Maps
+                </a>
+                <a
+                  href={WAZE_DIRECTIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-border px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/85 transition-colors hover:border-brand hover:text-brand"
+                >
+                  Waze
+                </a>
+                <a
+                  href={APPLE_DIRECTIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 border border-border px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/85 transition-colors hover:border-brand hover:text-brand"
+                >
+                  Apple Maps
+                </a>
+              </div>
               <div className="aspect-[4/3] overflow-hidden border border-border md:aspect-[16/11]">
                 <iframe
-                  title="Mappa Rondinella Padel Club — Via Edoardo Detti, Firenze"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=11.2155%2C43.7935%2C11.2355%2C43.8035&layer=mapnik&marker=43.7985%2C11.2255"
-                  className="h-full w-full grayscale invert-[0.92]"
+                  title="Mappa Rondinella Padel Club — Via Edoardo Detti 23, Firenze"
+                  src={MAP_EMBED}
+                  className="h-full w-full"
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
               </div>
             </div>
