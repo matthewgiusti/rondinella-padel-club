@@ -183,10 +183,9 @@ function ContactPage() {
                 />
               </div>
             </div>
-
-            </div>
           </div>
         </div>
+
       </section>
     </PageShell>
   );
