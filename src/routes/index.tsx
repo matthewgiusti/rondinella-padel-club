@@ -129,7 +129,7 @@ function Ticker() {
     "Corsi per tutti",
     "Wheelchair padel",
     "Tornei FITP",
-    "Americane del venerdì",
+    "Tornei sociali",
     "Bar interno",
     "Parcheggio",
     "Aperti 7/7",
@@ -211,7 +211,7 @@ function Pillars() {
     {
       icon: Trophy,
       t: "Corsi, lezioni e tornei",
-      d: "Corsi di gruppo, lezioni private, americane e tornei FITP: un calendario sempre attivo.",
+      d: "Corsi stagionali, lezioni da 1 a 4 persone, partite guidate e tornei sociali e FITP: un calendario sempre attivo.",
     },
 
   ];
