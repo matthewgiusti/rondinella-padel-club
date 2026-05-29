@@ -619,7 +619,7 @@ function WhatsAppCTA() {
           .
         </h2>
         <p className="mt-8 max-w-xl text-base leading-relaxed text-brand-foreground/80 md:text-lg">
-          Disponibilità campi, prova gratuita, info sui corsi o wheelchair padel — su
+          Disponibilità campi, info su corsi, lezioni o wheelchair padel — su
           WhatsApp rispondiamo entro pochi minuti.
         </p>
         <a
