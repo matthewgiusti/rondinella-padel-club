@@ -197,13 +197,13 @@ function CoursesPage() {
       <section className="relative overflow-hidden border-t border-border bg-brand py-24 text-brand-foreground md:py-28">
         <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
           <p className="text-[11px] font-bold uppercase tracking-[0.22em]">
-            Prima lezione gratuita
+            Iniziare è semplice
           </p>
           <h2 className="mt-6 max-w-3xl font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-6xl">
-            Vieni a provare.
+            Trova il corso
             <br />
             <span className="font-serif italic font-normal normal-case tracking-normal">
-              Senza impegno
+              giusto per te
             </span>
             .
           </h2>
