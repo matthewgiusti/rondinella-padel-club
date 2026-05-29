@@ -427,12 +427,13 @@ function Wheelchair() {
           <div className="md:col-span-5">
             <div className="border-l-2 border-brand pl-6 md:pl-10">
               <p className="font-serif text-2xl italic leading-snug text-foreground md:text-3xl">
-                "Qui non ti senti diverso. Ti senti un giocatore."
+                "Stesso campo, stesso gioco. Qui sei prima di tutto un giocatore."
               </p>
               <p className="mt-5 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                — Luca, socio dal 2023
+                — Wheelchair Padel · Rondinella
               </p>
             </div>
+
           </div>
         </div>
       </div>
