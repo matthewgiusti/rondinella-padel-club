@@ -155,7 +155,7 @@ function Identity() {
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <div className="grid items-end gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-6">
-            <p className="eyebrow">Benvenuti al Rondinella</p>
+            <p className="eyebrow">Benvenuti al RPC</p>
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-7xl">
               Un club fatto
               <br />
@@ -168,7 +168,7 @@ function Identity() {
           </div>
           <div className="md:col-span-5 md:col-start-8">
             <p className="text-base leading-relaxed text-foreground/85 md:text-lg">
-              Rondinella è uno sport club di Firenze dedicato al padel. Quattro campi
+              Il Rondinella Padel Club è uno sport club di Firenze dedicato al padel. Quattro campi
               coperti, maestri federali e un calendario di corsi e lezioni pensati per
               ogni livello, dai principianti agli agonisti.
             </p>
@@ -386,7 +386,7 @@ function Lessons() {
             <p className="max-w-lg font-serif text-2xl italic leading-snug text-foreground md:text-4xl">
               "Insegniamo a giocare. Ma soprattutto a divertirsi giocando."
               <span className="mt-4 block text-xs not-italic uppercase tracking-[0.22em] text-brand">
-                — I maestri Rondinella
+                — I maestri RPC
               </span>
             </p>
           </div>
@@ -403,7 +403,7 @@ function Wheelchair() {
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <div className="grid items-center gap-12 md:grid-cols-12">
           <div className="md:col-span-7">
-            <p className="eyebrow">Wheelchair Padel</p>
+            <p className="eyebrow">Wheelchair</p>
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-6xl">
               Lo sport è
               <br />
@@ -413,7 +413,7 @@ function Wheelchair() {
               .
             </h2>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-foreground/80 md:text-lg">
-              Al Rondinella il wheelchair padel non è un'attività extra: è parte del
+              Al RPC il Wheelchair non è un'attività extra: è parte del
               club. Campi accessibili, istruttori formati, gruppi misti e un calendario
               dedicato. Vieni a provare, da solo o con un amico.
             </p>
@@ -430,7 +430,7 @@ function Wheelchair() {
                 "Stesso campo, stesso gioco. Qui sei prima di tutto un giocatore."
               </p>
               <p className="mt-5 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                — Wheelchair Padel · Rondinella
+                — Wheelchair · RPC
               </p>
             </div>
 
@@ -552,7 +552,7 @@ function Testimonials() {
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <p className="eyebrow">Dicono di noi</p>
         <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
-          Chi gioca al Rondinella
+          Chi gioca al RPC
         </h2>
 
         <div className="mt-14 grid gap-10 md:grid-cols-3">
@@ -619,7 +619,7 @@ function WhatsAppCTA() {
           .
         </h2>
         <p className="mt-8 max-w-xl text-base leading-relaxed text-brand-foreground/80 md:text-lg">
-          Disponibilità campi, info su corsi, lezioni o wheelchair padel — su
+          Disponibilità campi, info su corsi, lezioni o Wheelchair — su
           WhatsApp rispondiamo entro pochi minuti.
         </p>
         <a
