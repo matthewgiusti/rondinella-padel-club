@@ -68,12 +68,12 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <a
-            href={WHATSAPP}
+            href={PLAYTOMIC}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden bg-brand px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground transition-all hover:brightness-110 md:inline-block"
           >
-            Scrivici su WhatsApp
+            Prenota
           </a>
           <button
             type="button"
@@ -102,12 +102,12 @@ export function SiteHeader() {
             </Link>
           ))}
           <a
-            href={WHATSAPP}
+            href={PLAYTOMIC}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-6 inline-flex items-center justify-center bg-brand px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground"
           >
-            Scrivici su WhatsApp
+            Prenota
           </a>
         </nav>
       </div>
