@@ -51,17 +51,16 @@ function ClubPage() {
             </div>
             <div className="md:col-span-7 space-y-6 text-base leading-relaxed text-foreground/85 md:text-lg">
               <p>
-                Rondinella è uno sport club di Firenze nord dove al centro ci sono le
-                persone, non l'infrastruttura. Sì, abbiamo quattro campi belli, tre
-                maestri federali e una struttura comoda — ma il vero motivo per cui la
-                gente torna è l'aria che si respira.
+                Rondinella è uno sport club di Firenze dedicato al padel: quattro campi,
+                tre maestri federali e una struttura comoda, pensata per chi vuole
+                giocare con continuità e migliorare a ogni livello.
               </p>
               <p className="text-foreground/70">
-                Non ci interessa fare il club esclusivo. Ci interessa essere il club del
-                quartiere: quello dove un trentenne ex-calciatore, una signora che ha
-                ripreso a muoversi, uno studente universitario e una famiglia con i
-                ragazzini si trovano la stessa sera e finiscono al bar insieme.
+                Non serve essere giocatori esperti né avere un'attrezzatura propria.
+                Principianti, intermedi e agonisti trovano qui campi sempre giocabili,
+                corsi su misura e maestri certificati.
               </p>
+
             </div>
           </div>
 
