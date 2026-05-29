@@ -71,10 +71,11 @@ function Hero() {
           </span>
         </h1>
         <p className="mt-8 max-w-xl text-base leading-relaxed text-foreground/85 animate-fade-up md:text-lg">
-          Il padel come ti piace: quattro campi, tre maestri FITP, gente che ti chiama
-          per nome dalla seconda volta. Per chi gioca da sempre e per chi non ha mai
-          tenuto in mano una pala.
+          Il padel come ti piace: quattro campi coperti, tre maestri FITP e lezioni per
+          ogni livello. Per chi gioca da sempre e per chi non ha mai tenuto in mano una
+          pala.
         </p>
+
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row animate-fade-up">
           <a
