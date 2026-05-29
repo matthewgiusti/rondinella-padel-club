@@ -46,9 +46,9 @@ export function SiteFooter() {
             <ul className="mt-6 space-y-3 text-sm">
               {[
                 ["/", "Home"],
+                ["/servizi", "Servizi"],
                 ["/corsi", "Corsi & Lezioni"],
                 ["/wheelchair", "Wheelchair"],
-                
                 ["/club", "Il Club"],
                 ["/contatti", "Contatti"],
               ].map(([to, label]) => (
