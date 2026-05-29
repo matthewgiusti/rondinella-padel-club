@@ -577,7 +577,7 @@ function Testimonials() {
           <div className="aspect-[4/3] overflow-hidden">
             <img
               src={communityImg}
-              alt="Soci al bar dopo la partita"
+              alt="Giocatori sul campo da padel al Rondinella"
               width={1600}
               height={1200}
               loading="lazy"
