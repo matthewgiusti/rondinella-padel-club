@@ -14,9 +14,10 @@ export function SiteFooter() {
           <div className="md:col-span-5">
             <Logo className="h-12 w-auto" />
             <p className="mt-8 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Il padel a Firenze nord come dovrebbe essere: quattro campi, gente vera,
-              partite che diventano amicizie. Ti aspettiamo.
+              Padel a Firenze: quattro campi, tre maestri FITP, corsi e lezioni per
+              ogni livello. Si gioca tutto l'anno, al coperto. Ti aspettiamo.
             </p>
+
             <div className="mt-10 flex items-center gap-3">
               <a
                 href={WHATSAPP}
