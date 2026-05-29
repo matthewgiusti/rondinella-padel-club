@@ -29,7 +29,7 @@ export function SiteFooter() {
                 <MessageCircle size={18} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/rondinellapadelclub"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -37,6 +37,7 @@ export function SiteFooter() {
               >
                 <Instagram size={18} />
               </a>
+
             </div>
           </div>
 
