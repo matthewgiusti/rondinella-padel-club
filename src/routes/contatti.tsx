@@ -20,7 +20,7 @@ export const Route = createFileRoute("/contatti")({
 });
 
 const WHATSAPP =
-  "https://wa.me/393000000000?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+  "https://wa.me/393712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
 function ContactPage() {
   return (
@@ -59,7 +59,7 @@ function ContactPage() {
                 i: Phone,
                 t: "Telefono",
                 v: "+39 000 000 0000",
-                a: "tel:+390000000000",
+                a: "tel:+393712615",
                 cta: "Chiama",
               },
               {

@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 import { Instagram, MessageCircle, MapPin, Mail, Phone } from "lucide-react";
 
 const WHATSAPP =
-  "https://wa.me/393000000000?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+  "https://wa.me/393712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
 export function SiteFooter() {
   return (
@@ -74,7 +74,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-brand" />
-                <a href="tel:+390000000000" className="hover:text-brand">
+                <a href="tel:+393712615" className="hover:text-brand">
                   +39 000 000 0000
                 </a>
               </li>
