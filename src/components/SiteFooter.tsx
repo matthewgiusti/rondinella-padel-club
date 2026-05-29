@@ -3,7 +3,8 @@ import { Logo } from "./Logo";
 import { Instagram, MessageCircle, MapPin, Mail, Phone } from "lucide-react";
 
 const WHATSAPP =
-  "https://wa.me/393000000000?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+  "https://wa.me/393712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+
 
 export function SiteFooter() {
   return (
@@ -13,9 +14,10 @@ export function SiteFooter() {
           <div className="md:col-span-5">
             <Logo className="h-12 w-auto" />
             <p className="mt-8 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Il padel a Firenze nord come dovrebbe essere: quattro campi, gente vera,
-              partite che diventano amicizie. Ti aspettiamo.
+              Padel a Firenze: quattro campi, tre maestri FITP, corsi e lezioni per
+              ogni livello. Si gioca tutto l'anno, al coperto. Ti aspettiamo.
             </p>
+
             <div className="mt-10 flex items-center gap-3">
               <a
                 href={WHATSAPP}
@@ -27,7 +29,7 @@ export function SiteFooter() {
                 <MessageCircle size={18} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/rondinellapadelclub"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -35,6 +37,7 @@ export function SiteFooter() {
               >
                 <Instagram size={18} />
               </a>
+
             </div>
           </div>
 
@@ -67,30 +70,31 @@ export function SiteFooter() {
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-brand" />
                 <span>
-                  Via della Rondinella, 50019
+                  Via Edoardo Detti, 23
                   <br />
-                  Sesto Fiorentino · Firenze
+                  50143 Firenze (FI)
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-brand" />
-                <a href="tel:+390000000000" className="hover:text-brand">
-                  +39 000 000 0000
+                <a href="tel:+393712615" className="hover:text-brand">
+                  +39 3712615
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-brand" />
-                <a href="mailto:info@rondinellapadel.it" className="hover:text-brand">
-                  info@rondinellapadel.it
+                <a href="mailto:info@rondinellapadelclub.it" className="hover:text-brand">
+                  info@rondinellapadelclub.it
                 </a>
               </li>
             </ul>
           </div>
+
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Rondinella Padel Club · Firenze</p>
-          <p>P.IVA 00000000000</p>
+          <p>P.IVA 07188890482</p>
         </div>
       </div>
     </footer>

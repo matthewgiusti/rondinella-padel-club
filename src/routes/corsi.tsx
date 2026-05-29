@@ -23,7 +23,7 @@ export const Route = createFileRoute("/corsi")({
 });
 
 const WHATSAPP =
-  "https://wa.me/393000000000?text=Ciao%2C%20vorrei%20informazioni%20sui%20corsi";
+  "https://wa.me/393712615?text=Ciao%2C%20vorrei%20informazioni%20sui%20corsi";
 
 function CoursesPage() {
   return (

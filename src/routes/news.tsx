@@ -25,7 +25,7 @@ export const Route = createFileRoute("/news")({
 });
 
 const WHATSAPP =
-  "https://wa.me/393000000000?text=Ciao%2C%20vorrei%20iscrivermi%20a%20un%20torneo";
+  "https://wa.me/393712615?text=Ciao%2C%20vorrei%20iscrivermi%20a%20un%20torneo";
 
 const posts = [
   {

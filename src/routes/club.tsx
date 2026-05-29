@@ -13,7 +13,8 @@ export const Route = createFileRoute("/club")({
       {
         name: "description",
         content:
-          "Quattro campi, tre maestri FITP, una community che gioca insieme. Storia, valori e struttura del Rondinella Padel Club di Firenze nord.",
+          "Quattro campi coperti, tre maestri FITP, corsi e lezioni per ogni livello. Scopri il Rondinella Padel Club di Firenze, in Via Edoardo Detti.",
+
       },
       { property: "og:title", content: "Il Club — Rondinella Padel Club" },
       { property: "og:url", content: "/club" },
@@ -27,10 +28,11 @@ function ClubPage() {
     <PageShell>
       <PageHero
         eyebrow="Il Club"
-        title="Un posto"
-        italicWord="dove tornare."
-        description="Sport, amici, famiglia. Tre parole semplici che raccontano davvero come si vive il Rondinella ogni giorno."
+        title="Il padel"
+        italicWord="a Firenze."
+        description="Quattro campi coperti, tre maestri FITP, corsi e lezioni per ogni livello. Uno sport club dedicato al padel, aperto a tutti."
         image={clubImg}
+
       />
 
       <section className="bg-background py-24 md:py-32">
@@ -49,17 +51,16 @@ function ClubPage() {
             </div>
             <div className="md:col-span-7 space-y-6 text-base leading-relaxed text-foreground/85 md:text-lg">
               <p>
-                Rondinella è uno sport club di Firenze nord dove al centro ci sono le
-                persone, non l'infrastruttura. Sì, abbiamo quattro campi belli, tre
-                maestri federali e una struttura comoda — ma il vero motivo per cui la
-                gente torna è l'aria che si respira.
+                Rondinella è uno sport club di Firenze dedicato al padel: quattro campi,
+                tre maestri federali e una struttura comoda, pensata per chi vuole
+                giocare con continuità e migliorare a ogni livello.
               </p>
               <p className="text-foreground/70">
-                Non ci interessa fare il club esclusivo. Ci interessa essere il club del
-                quartiere: quello dove un trentenne ex-calciatore, una signora che ha
-                ripreso a muoversi, uno studente universitario e una famiglia con i
-                ragazzini si trovano la stessa sera e finiscono al bar insieme.
+                Non serve essere giocatori esperti né avere un'attrezzatura propria.
+                Principianti, intermedi e agonisti trovano qui campi sempre giocabili,
+                corsi su misura e maestri certificati.
               </p>
+
             </div>
           </div>
 
@@ -148,9 +149,10 @@ function ClubPage() {
               },
               {
                 n: "02",
-                t: "Community",
-                d: "I tornei sociali, le americane, le serate al bar: organizziamo occasioni perché la gente si conosca, non solo perché paghi un'ora di campo.",
+                t: "Continuità",
+                d: "Campi coperti e illuminati, aperti tutti i giorni: si gioca tutto l'anno, con qualsiasi tempo e a qualsiasi ora.",
               },
+
               {
                 n: "03",
                 t: "Sport vero",
@@ -184,37 +186,41 @@ function ClubPage() {
             .
           </h2>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
-            Tutti e tre certificati FITP, tutti e tre convinti che si insegna meglio
-            quando si crea un ambiente in cui gli allievi vogliono tornare. Tecnica
-            seria, atmosfera leggera.
+            Tutti e tre certificati FITP, tutti e tre alla pari: scegli il maestro o
+            l'orario che preferisci, l'approccio è lo stesso. Tecnica seria e metodo
+            accessibile, dal primo colpo al gioco di coppia.
           </p>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {[
               {
-                r: "Head Coach FITP",
-                d: "Coordina il settore corsi e segue gli allievi avanzati e agonisti.",
+                n: "Dario Satti",
+                d: "Maestro FITP. Lavora con principianti, gruppi e agonisti, dal primo approccio al perfezionamento.",
               },
               {
-                r: "Maestra FITP · settore donne & junior",
-                d: "Specializzata nei gruppi femminili, junior e nei percorsi di avviamento.",
+                n: "Filippo Giacomelli",
+                d: "Maestro FITP. Segue corsi e lezioni private per ogni livello, con attenzione a tecnica e tattica.",
               },
               {
-                r: "Maestro FITP · adulti & wheelchair",
-                d: "Lavora con principianti, gruppi adulti e con il programma di wheelchair padel.",
+                n: "Nicola Manfredini",
+                d: "Maestro FITP. Cura percorsi individuali e di gruppo, accompagnando ogni allievo nel suo percorso.",
               },
-            ].map((p, i) => (
+            ].map((p) => (
               <article
-                key={i}
+                key={p.n}
                 className="border border-border bg-background p-8 transition-colors hover:border-brand"
               >
-                <p className="text-[10px] uppercase tracking-[0.22em] text-brand">
-                  {p.r}
+                <h3 className="font-display text-xl font-bold uppercase tracking-tight">
+                  {p.n}
+                </h3>
+                <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-brand">
+                  Maestro FITP
                 </p>
                 <p className="mt-5 text-sm leading-relaxed text-foreground/70">{p.d}</p>
               </article>
             ))}
           </div>
+
         </div>
       </section>
 
@@ -228,11 +234,12 @@ function ClubPage() {
         />
         <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
           <h2 className="max-w-3xl font-serif text-3xl italic leading-snug md:text-5xl">
-            "Qui non ci si sente ospiti. Ci si sente del posto."
+            "Campi coperti, maestri certificati e padel tutto l'anno. A Firenze."
           </h2>
           <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.22em]">
-            — Un socio, una sera qualsiasi
+            — Rondinella Padel Club
           </p>
+
         </div>
       </section>
     </PageShell>

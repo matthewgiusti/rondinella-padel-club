@@ -80,14 +80,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Padel a Firenze nord: 4 campi (3 coperti + 1 semi-coperto), corsi per tutti i livelli, wheelchair padel, tornei FITP e una community che ti fa sentire a casa.",
+          "Padel a Firenze: 4 campi (3 coperti + 1 semi-coperto), corsi e lezioni per tutti i livelli, wheelchair padel e tornei FITP. In Via Edoardo Detti, Firenze.",
       },
       { property: "og:title", content: "Rondinella Padel Club — Firenze" },
       {
         property: "og:description",
         content:
-          "Quattro campi, tre maestri FITP, lezioni, tornei e wheelchair padel. Il club di padel di Firenze nord.",
+          "Quattro campi, tre maestri FITP, corsi, lezioni, tornei e wheelchair padel. Il club di padel di Firenze.",
       },
+
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Rondinella Padel Club" },
       { property: "og:url", content: "/" },
@@ -114,18 +115,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "SportsClub",
           name: "Rondinella Padel Club",
           sport: "Padel",
+          telephone: "+393712615",
+          email: "info@rondinellapadelclub.it",
+          url: "https://rondinellapadelclub.it",
           areaServed: ["Firenze", "Scandicci", "Sesto Fiorentino"],
+          openingHours: "Mo-Su 07:00-23:30",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Via della Rondinella",
-            postalCode: "50019",
-            addressLocality: "Sesto Fiorentino",
+            streetAddress: "Via Edoardo Detti, 23",
+            postalCode: "50143",
+            addressLocality: "Firenze",
             addressRegion: "FI",
             addressCountry: "IT",
           },
         }),
       },
     ],
+
   }),
   shellComponent: RootShell,
   component: RootComponent,

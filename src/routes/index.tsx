@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "4 campi (3 coperti + 1 semi-coperto), corsi, wheelchair padel, tornei FITP. Il club di padel di Firenze nord per chi vuole giocare e stare bene.",
+          "4 campi (3 coperti + 1 semi-coperto), corsi, wheelchair padel, tornei FITP. Il club di padel di Firenze, in Via Edoardo Detti.",
       },
       { property: "og:title", content: "Rondinella Padel Club — Firenze" },
       { property: "og:url", content: "/" },
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATSAPP =
-  "https://wa.me/393000000000?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+  "https://wa.me/393712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
 function HomePage() {
   return (
@@ -61,7 +61,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-transparent" />
 
       <div className="relative mx-auto w-full max-w-[1400px] px-5 pb-20 pt-32 md:px-10 md:pb-28">
-        <p className="eyebrow animate-fade-up">Firenze · Scandicci · Sesto Fiorentino</p>
+        <p className="eyebrow animate-fade-up">Padel a Firenze · Coperto · Tutti i livelli</p>
         <h1 className="mt-6 max-w-5xl font-display text-[44px] font-black uppercase leading-[0.92] tracking-tight text-foreground animate-fade-up md:text-[120px]">
           Gioca.
           <br />
@@ -71,10 +71,11 @@ function Hero() {
           </span>
         </h1>
         <p className="mt-8 max-w-xl text-base leading-relaxed text-foreground/85 animate-fade-up md:text-lg">
-          Il padel come ti piace: quattro campi, tre maestri FITP, gente che ti chiama
-          per nome dalla seconda volta. Per chi gioca da sempre e per chi non ha mai
-          tenuto in mano una pala.
+          Il padel come ti piace: quattro campi coperti, tre maestri FITP e lezioni per
+          ogni livello. Per chi gioca da sempre e per chi non ha mai tenuto in mano una
+          pala.
         </p>
+
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row animate-fade-up">
           <a
@@ -103,8 +104,9 @@ function Hero() {
             ["04", "Campi"],
             ["03", "Coperti"],
             ["FITP", "Maestri certificati"],
-            ["7 / 24", "Sempre aperti"],
+            ["7/7", "Aperti tutti i giorni"],
           ].map(([n, l]) => (
+
             <div key={l}>
               <div className="font-display text-2xl font-black text-brand md:text-3xl">
                 {n}
@@ -157,23 +159,24 @@ function Identity() {
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-7xl">
               Un club fatto
               <br />
-              di{" "}
+              per{" "}
               <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
-                persone
+                giocare
               </span>
               .
             </h2>
           </div>
           <div className="md:col-span-5 md:col-start-8">
             <p className="text-base leading-relaxed text-foreground/85 md:text-lg">
-              Rondinella è uno sport club di Firenze nord nato per chi ama muoversi
-              insieme agli altri. Famiglie, gruppi di amici, ex sportivi, principianti
-              curiosi: qui si gioca a padel ma soprattutto si sta bene.
+              Rondinella è uno sport club di Firenze dedicato al padel. Quattro campi
+              coperti, maestri federali e un calendario di corsi e lezioni pensati per
+              ogni livello, dai principianti agli agonisti.
             </p>
             <p className="mt-5 text-base leading-relaxed text-foreground/70 md:text-lg">
-              Niente snob, nessuna iscrizione obbligatoria, nessun livello minimo.
-              Prenoti, vieni, giochi. Il resto succede da sé.
+              Nessuna iscrizione obbligatoria, nessun livello minimo. Prenoti, vieni,
+              giochi.
             </p>
+
             <Link
               to="/club"
               className="mt-8 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand"
@@ -192,8 +195,8 @@ function Pillars() {
   const items = [
     {
       icon: Heart,
-      t: "Sport · Amici · Famiglia",
-      d: "Tre parole che scriviamo sui muri perché sono quelle che facciamo davvero, ogni sera.",
+      t: "Campi sempre coperti",
+      d: "Tre campi indoor e uno semi-coperto: si gioca tutto l'anno, con qualsiasi tempo.",
     },
     {
       icon: Users,
@@ -203,13 +206,14 @@ function Pillars() {
     {
       icon: GraduationCap,
       t: "Maestri FITP",
-      d: "Tre tecnici federali che insegnano col sorriso. Si impara, ci si diverte, si torna.",
+      d: "Tre tecnici federali con un metodo serio e accessibile. Si impara e si migliora a ogni livello.",
     },
     {
       icon: Trophy,
-      t: "Tornei & socialità",
-      d: "Americane infrasettimanali, tornei FITP nel weekend, serate aperte. Il giovedì non si sta a casa.",
+      t: "Corsi, lezioni e tornei",
+      d: "Corsi di gruppo, lezioni private, americane e tornei FITP: un calendario sempre attivo.",
     },
+
   ];
   return (
     <section className="border-t border-border bg-surface py-20 md:py-28">
@@ -423,12 +427,13 @@ function Wheelchair() {
           <div className="md:col-span-5">
             <div className="border-l-2 border-brand pl-6 md:pl-10">
               <p className="font-serif text-2xl italic leading-snug text-foreground md:text-3xl">
-                "Qui non ti senti diverso. Ti senti un giocatore."
+                "Stesso campo, stesso gioco. Qui sei prima di tutto un giocatore."
               </p>
               <p className="mt-5 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
-                — Luca, socio dal 2023
+                — Wheelchair Padel · Rondinella
               </p>
             </div>
+
           </div>
         </div>
       </div>
@@ -445,18 +450,19 @@ function Tournaments() {
           <div className="md:col-span-5">
             <p className="eyebrow">Tornei & Eventi</p>
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-6xl">
-              Si gioca,
+              Si gioca
               <br />
               <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
-                si tifa
+                tutto l'anno
               </span>
-              , si resta.
+              .
             </h2>
             <p className="mt-8 text-base leading-relaxed text-foreground/80">
-              Americane del venerdì, tornei interni e tappe FITP ufficiali. E dopo la
-              partita ci si ferma: chi gioca tifa, chi tifa beve, chi beve organizza la
-              prossima.
+              Americane del venerdì, tornei interni e tappe FITP ufficiali. Un
+              calendario pensato per chi vuole giocare con continuità e mettersi alla
+              prova.
             </p>
+
             <Link
               to="/news"
               className="mt-8 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand"
@@ -526,28 +532,29 @@ function Tournaments() {
 function Testimonials() {
   const items = [
     {
-      q: "Sono entrata per una lezione di prova. Tre mesi dopo ho una squadra fissa il martedì.",
+      q: "Sono entrata per una lezione di prova e ho continuato con il corso. In pochi mesi gioco partite vere.",
       n: "Giulia",
-      r: "Socia dal 2024",
+      r: "Allieva corso base",
     },
     {
-      q: "Mio figlio gioca, io gioco, mia moglie tifa al bar. È diventato il posto della famiglia.",
+      q: "Campi sempre in ordine e coperti: gioco anche d'inverno, senza pensieri. Prenotare è semplicissimo.",
       n: "Andrea",
-      r: "Socio dal 2022",
+      r: "Gioca dal 2022",
     },
     {
-      q: "Non avevo mai fatto sport in vita mia. Qui sono partito da zero senza sentirmi fuori posto.",
+      q: "Non avevo mai fatto sport. Qui sono partito da zero con i maestri, al mio ritmo e senza pressioni.",
       n: "Federico",
-      r: "Socio dal 2025",
+      r: "Lezioni private",
     },
   ];
   return (
     <section className="border-t border-border bg-surface py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-        <p className="eyebrow">Le voci del club</p>
+        <p className="eyebrow">Dicono di noi</p>
         <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
-          Cosa dicono i nostri soci
+          Chi gioca al Rondinella
         </h2>
+
         <div className="mt-14 grid gap-10 md:grid-cols-3">
           {items.map((t) => (
             <figure key={t.n} className="flex flex-col">
@@ -571,7 +578,7 @@ function Testimonials() {
           <div className="aspect-[4/3] overflow-hidden">
             <img
               src={communityImg}
-              alt="Soci al bar dopo la partita"
+              alt="Giocatori sul campo da padel al Rondinella"
               width={1600}
               height={1200}
               loading="lazy"
@@ -638,10 +645,10 @@ function Visit() {
           <div className="md:col-span-5">
             <p className="eyebrow">Vieni a trovarci</p>
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
-              Sesto Fiorentino
+              Firenze
               <br />
               <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
-                Firenze nord
+                Via Edoardo Detti
               </span>
             </h2>
             <ul className="mt-10 space-y-5 text-sm">
@@ -652,7 +659,7 @@ function Visit() {
                     Aperti
                   </div>
                   <div className="mt-1 text-foreground/85">
-                    Lun—Dom · 08:00 — 23:30
+                    Tutti i giorni · 07:00 — 23:30
                   </div>
                 </div>
               </li>
@@ -663,7 +670,7 @@ function Visit() {
                     Indirizzo
                   </div>
                   <div className="mt-1 text-foreground/85">
-                    Via della Rondinella · 50019 Sesto Fiorentino (FI)
+                    Via Edoardo Detti, 23 · 50143 Firenze (FI)
                   </div>
                 </div>
               </li>
@@ -673,7 +680,7 @@ function Visit() {
                   <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                     Contatto rapido
                   </div>
-                  <div className="mt-1 text-foreground/85">+39 000 000 0000</div>
+                  <div className="mt-1 text-foreground/85">+39 3712615</div>
                 </div>
               </li>
             </ul>
@@ -683,12 +690,13 @@ function Visit() {
             <div className="aspect-[4/3] overflow-hidden border border-border md:aspect-[16/11]">
               <iframe
                 title="Mappa Rondinella Padel Club"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=11.18%2C43.82%2C11.24%2C43.86&layer=mapnik"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=11.2155%2C43.7935%2C11.2355%2C43.8035&layer=mapnik&marker=43.7985%2C11.2255"
                 className="h-full w-full grayscale invert-[0.92]"
                 loading="lazy"
               />
             </div>
           </div>
+
         </div>
       </div>
     </section>

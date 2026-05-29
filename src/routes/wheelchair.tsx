@@ -23,7 +23,7 @@ export const Route = createFileRoute("/wheelchair")({
 });
 
 const WHATSAPP =
-  "https://wa.me/393000000000?text=Ciao%2C%20vorrei%20informazioni%20sul%20wheelchair%20padel";
+  "https://wa.me/393712615?text=Ciao%2C%20vorrei%20informazioni%20sul%20wheelchair%20padel";
 
 function WheelchairPage() {
   return (
@@ -32,8 +32,9 @@ function WheelchairPage() {
         eyebrow="Wheelchair Padel"
         title="Lo sport"
         italicWord="è di tutti."
-        description="Al Rondinella il wheelchair padel è una parte vera del club. Campi accessibili, istruttori dedicati e una community che gioca insieme."
+        description="Al Rondinella il wheelchair padel è una parte vera del club. Campi accessibili, istruttori dedicati e sessioni aperte a tutti i livelli."
         image={communityImg}
+
       />
 
       <section className="bg-background py-24 md:py-32">
@@ -84,7 +85,7 @@ function WheelchairPage() {
               },
               {
                 t: "Partite miste",
-                d: "Sessioni di gioco con altri soci del club. Per chi gioca da tempo e cerca compagni.",
+                d: "Sessioni di gioco con altri giocatori del club. Per chi gioca da tempo e cerca compagni.",
                 p: "Aperte",
               },
             ].map((c) => (
@@ -110,7 +111,7 @@ function WheelchairPage() {
               "Campi accessibili dall'ingresso agli spogliatoi",
               "Istruttori formati al wheelchair padel",
               "Sedie sportive disponibili in prova",
-              "Gruppi misti aperti a tutti i soci",
+              "Gruppi misti aperti a tutti i giocatori",
             ].map((p) => (
               <li
                 key={p}
