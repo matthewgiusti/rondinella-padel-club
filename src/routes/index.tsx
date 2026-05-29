@@ -644,10 +644,10 @@ function Visit() {
           <div className="md:col-span-5">
             <p className="eyebrow">Vieni a trovarci</p>
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
-              Sesto Fiorentino
+              Firenze
               <br />
               <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
-                Firenze nord
+                Via Edoardo Detti
               </span>
             </h2>
             <ul className="mt-10 space-y-5 text-sm">
@@ -658,7 +658,7 @@ function Visit() {
                     Aperti
                   </div>
                   <div className="mt-1 text-foreground/85">
-                    Lun—Dom · 08:00 — 23:30
+                    Tutti i giorni · 07:00 — 23:30
                   </div>
                 </div>
               </li>
@@ -669,7 +669,7 @@ function Visit() {
                     Indirizzo
                   </div>
                   <div className="mt-1 text-foreground/85">
-                    Via della Rondinella · 50019 Sesto Fiorentino (FI)
+                    Via Edoardo Detti, 23 · 50143 Firenze (FI)
                   </div>
                 </div>
               </li>
@@ -679,7 +679,7 @@ function Visit() {
                   <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                     Contatto rapido
                   </div>
-                  <div className="mt-1 text-foreground/85">+39 000 000 0000</div>
+                  <div className="mt-1 text-foreground/85">+39 3712615</div>
                 </div>
               </li>
             </ul>
@@ -689,12 +689,13 @@ function Visit() {
             <div className="aspect-[4/3] overflow-hidden border border-border md:aspect-[16/11]">
               <iframe
                 title="Mappa Rondinella Padel Club"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=11.18%2C43.82%2C11.24%2C43.86&layer=mapnik"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=11.2155%2C43.7935%2C11.2355%2C43.8035&layer=mapnik&marker=43.7985%2C11.2255"
                 className="h-full w-full grayscale invert-[0.92]"
                 loading="lazy"
               />
             </div>
           </div>
+
         </div>
       </div>
     </section>
