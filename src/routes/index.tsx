@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "4 campi (3 coperti + 1 semi-coperto), corsi, wheelchair padel, tornei FITP. Il club di padel di Firenze nord per chi vuole giocare e stare bene.",
+          "4 campi (3 coperti + 1 semi-coperto), corsi, wheelchair padel, tornei FITP. Il club di padel di Firenze, in Via Edoardo Detti.",
       },
       { property: "og:title", content: "Rondinella Padel Club — Firenze" },
       { property: "og:url", content: "/" },
