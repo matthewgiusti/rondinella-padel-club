@@ -149,9 +149,10 @@ function ClubPage() {
               },
               {
                 n: "02",
-                t: "Community",
-                d: "I tornei sociali, le americane, le serate al bar: organizziamo occasioni perché la gente si conosca, non solo perché paghi un'ora di campo.",
+                t: "Continuità",
+                d: "Campi coperti e illuminati, aperti tutti i giorni: si gioca tutto l'anno, con qualsiasi tempo e a qualsiasi ora.",
               },
+
               {
                 n: "03",
                 t: "Sport vero",
