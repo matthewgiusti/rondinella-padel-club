@@ -91,7 +91,7 @@ function Hero() {
             to="/corsi"
             className="group inline-flex items-center justify-center gap-3 border border-foreground/30 bg-transparent px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.2em] text-foreground transition-all hover:border-brand hover:text-brand"
           >
-            Prova gratuita
+            Scopri i corsi
             <ArrowRight
               size={16}
               className="transition-transform group-hover:translate-x-1"
