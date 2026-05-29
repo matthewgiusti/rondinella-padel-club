@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
-import { MapPin, Phone, Mail, MessageCircle, Clock, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, Clock, Instagram, Navigation } from "lucide-react";
+import {
+  MAP_EMBED,
+  GOOGLE_DIRECTIONS,
+  APPLE_DIRECTIONS,
+  WAZE_DIRECTIONS,
+} from "@/components/MapDirections";
 
 export const Route = createFileRoute("/contatti")({
   component: ContactPage,
