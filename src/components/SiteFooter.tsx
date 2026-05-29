@@ -94,7 +94,7 @@ export function SiteFooter() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Rondinella Padel Club · Firenze</p>
-          <p>P.IVA 00000000000</p>
+          <p>P.IVA 07188890482</p>
         </div>
       </div>
     </footer>
