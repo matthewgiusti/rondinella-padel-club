@@ -449,18 +449,19 @@ function Tournaments() {
           <div className="md:col-span-5">
             <p className="eyebrow">Tornei & Eventi</p>
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-6xl">
-              Si gioca,
+              Si gioca
               <br />
               <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
-                si tifa
+                tutto l'anno
               </span>
-              , si resta.
+              .
             </h2>
             <p className="mt-8 text-base leading-relaxed text-foreground/80">
-              Americane del venerdì, tornei interni e tappe FITP ufficiali. E dopo la
-              partita ci si ferma: chi gioca tifa, chi tifa beve, chi beve organizza la
-              prossima.
+              Americane del venerdì, tornei interni e tappe FITP ufficiali. Un
+              calendario pensato per chi vuole giocare con continuità e mettersi alla
+              prova.
             </p>
+
             <Link
               to="/news"
               className="mt-8 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand"
