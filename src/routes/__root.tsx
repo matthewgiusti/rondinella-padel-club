@@ -114,14 +114,50 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "SportsClub",
+          "@type": ["SportsActivityLocation", "SportsClub"],
+          "@id": "https://rondinella-padel-club.lovable.app/#organization",
           name: "Rondinella Padel Club",
+          alternateName: "RPC — Rondinella Padel Club",
+          description:
+            "Club di padel a Firenze: 4 campi (3 coperti + 1 semi-coperto), corsi e lezioni per tutti i livelli, wheelchair padel e tornei FITP.",
           sport: "Padel",
           telephone: "+393293712615",
           email: "info@rondinellapadelclub.it",
-          url: "https://rondinellapadelclub.it",
-          areaServed: ["Firenze", "Scandicci", "Sesto Fiorentino"],
-          openingHours: "Mo-Su 07:00-23:30",
+          url: "https://rondinella-padel-club.lovable.app",
+          image: "https://rondinella-padel-club.lovable.app/favicon.jpg",
+          logo: "https://rondinella-padel-club.lovable.app/favicon.jpg",
+          priceRange: "€€",
+          currenciesAccepted: "EUR",
+          areaServed: [
+            { "@type": "City", name: "Firenze" },
+            { "@type": "City", name: "Scandicci" },
+            { "@type": "City", name: "Sesto Fiorentino" },
+            { "@type": "City", name: "Campi Bisenzio" },
+          ],
+          sameAs: ["https://instagram.com/rondinellapadelclub"],
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ],
+              opens: "07:00",
+              closes: "23:30",
+            },
+          ],
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: 43.7985,
+            longitude: 11.2255,
+          },
+          hasMap:
+            "https://www.google.com/maps/search/?api=1&query=Rondinella%20Padel%20Club%20Via%20Edoardo%20Detti%2023%20Firenze",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Via Edoardo Detti, 23",
@@ -130,6 +166,47 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressRegion: "FI",
             addressCountry: "IT",
           },
+          amenityFeature: [
+            { "@type": "LocationFeatureSpecification", name: "Campi coperti", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Spogliatoi", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Bar interno", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Ristorante", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Parcheggio", value: true },
+          ],
+          makesOffer: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Corsi di padel a Firenze",
+                serviceType: "Corsi di padel",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Lezioni di padel con maestri FITP",
+                serviceType: "Lezioni di padel",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Noleggio campo da padel coperto",
+                serviceType: "Prenotazione campo",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Wheelchair padel",
+                serviceType: "Padel in carrozzina",
+              },
+            },
+          ],
         }),
       },
     ],
