@@ -10,7 +10,8 @@ export const Route = createFileRoute("/contatti")({
       {
         name: "description",
         content:
-          "Vieni a trovarci al Rondinella Padel Club di Sesto Fiorentino: indirizzo, orari, WhatsApp, telefono e mappa.",
+          "Vieni a trovarci al Rondinella Padel Club di Firenze: indirizzo in Via Edoardo Detti 23, orari, WhatsApp, telefono e mappa.",
+
       },
       { property: "og:title", content: "Contatti — Rondinella Padel Club" },
       { property: "og:url", content: "/contatti" },
