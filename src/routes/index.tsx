@@ -195,8 +195,8 @@ function Pillars() {
   const items = [
     {
       icon: Heart,
-      t: "Sport · Amici · Famiglia",
-      d: "Tre parole che scriviamo sui muri perché sono quelle che facciamo davvero, ogni sera.",
+      t: "Campi sempre coperti",
+      d: "Tre campi indoor e uno semi-coperto: si gioca tutto l'anno, con qualsiasi tempo.",
     },
     {
       icon: Users,
@@ -206,13 +206,14 @@ function Pillars() {
     {
       icon: GraduationCap,
       t: "Maestri FITP",
-      d: "Tre tecnici federali che insegnano col sorriso. Si impara, ci si diverte, si torna.",
+      d: "Tre tecnici federali con un metodo serio e accessibile. Si impara e si migliora a ogni livello.",
     },
     {
       icon: Trophy,
-      t: "Tornei & socialità",
-      d: "Americane infrasettimanali, tornei FITP nel weekend, serate aperte. Il giovedì non si sta a casa.",
+      t: "Corsi, lezioni e tornei",
+      d: "Corsi di gruppo, lezioni private, americane e tornei FITP: un calendario sempre attivo.",
     },
+
   ];
   return (
     <section className="border-t border-border bg-surface py-20 md:py-28">
