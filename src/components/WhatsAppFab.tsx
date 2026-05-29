@@ -1,7 +1,7 @@
 import { MessageCircle } from "lucide-react";
 
 const WHATSAPP =
-  "https://wa.me/393712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+  "https://wa.me/393293712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
 export function WhatsAppFab() {
   return (

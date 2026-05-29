@@ -23,7 +23,7 @@ export const Route = createFileRoute("/wheelchair")({
 });
 
 const WHATSAPP =
-  "https://wa.me/393712615?text=Ciao%2C%20vorrei%20informazioni%20sul%20wheelchair%20padel";
+  "https://wa.me/393293712615?text=Ciao%2C%20vorrei%20informazioni%20sul%20wheelchair%20padel";
 
 function WheelchairPage() {
   return (

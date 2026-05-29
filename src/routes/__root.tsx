@@ -117,7 +117,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "SportsClub",
           name: "Rondinella Padel Club",
           sport: "Padel",
-          telephone: "+393712615",
+          telephone: "+393293712615",
           email: "info@rondinellapadelclub.it",
           url: "https://rondinellapadelclub.it",
           areaServed: ["Firenze", "Scandicci", "Sesto Fiorentino"],
