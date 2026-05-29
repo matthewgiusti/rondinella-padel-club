@@ -53,16 +53,21 @@ function WheelchairPage() {
             </div>
             <div className="md:col-span-7 space-y-6 text-base leading-relaxed text-foreground/85 md:text-lg">
               <p>
-                Il wheelchair padel si gioca sugli stessi campi del padel tradizionale,
-                con regole leggermente adattate. Al Rondinella organizziamo lezioni
-                individuali, sessioni di gruppo e partite miste — perché giocare insieme
-                è il punto.
+                Dal <strong className="font-semibold text-foreground">settembre 2023</strong>,
+                con il Progetto Wheelchair abbiamo aperto le porte del padel alle persone
+                con disabilità motoria, convinti che questo sport possa abbattere ogni
+                barriera. Si gioca sugli stessi campi del padel tradizionale, con regole
+                leggermente adattate.
               </p>
               <p className="text-foreground/70">
-                I nostri campi sono accessibili dall'ingresso fino agli spogliatoi.
-                Sedie sportive disponibili in prova per chi vuole iniziare senza
-                attrezzatura propria.
+                Organizziamo lezioni individuali, sessioni di gruppo e partite miste —
+                perché giocare insieme è il punto. I campi sono accessibili dall'ingresso
+                fino agli spogliatoi e mettiamo a disposizione carrozzine da padel
+                dedicate, in prova per chi vuole iniziare senza attrezzatura propria.
+                Insieme a ConsorzioBlu e al Gruppo Sportivo Unità Spinale accompagniamo
+                anche chi vuole arrivare all'agonismo.
               </p>
+
             </div>
           </div>
         </div>
