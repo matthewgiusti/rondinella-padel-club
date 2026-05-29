@@ -127,10 +127,10 @@ function ContactPage() {
             <div className="md:col-span-5">
               <p className="eyebrow">Dove siamo</p>
               <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
-                Sesto Fiorentino
+                Firenze
                 <br />
                 <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
-                  Firenze nord
+                  Via Edoardo Detti
                 </span>
               </h2>
               <ul className="mt-10 space-y-6 text-sm">
@@ -141,9 +141,9 @@ function ContactPage() {
                       Indirizzo
                     </div>
                     <div className="mt-1 text-foreground/85">
-                      Via della Rondinella, 50019
+                      Via Edoardo Detti, 23
                       <br />
-                      Sesto Fiorentino (FI)
+                      50143 Firenze (FI)
                     </div>
                   </div>
                 </li>
@@ -154,7 +154,7 @@ function ContactPage() {
                       Apertura
                     </div>
                     <div className="mt-1 text-foreground/85">
-                      Lunedì — Domenica · 08:00 — 23:30
+                      Tutti i giorni · 07:00 — 23:30
                     </div>
                   </div>
                 </li>
@@ -165,8 +165,8 @@ function ContactPage() {
                       Come arrivare
                     </div>
                     <div className="mt-1 text-foreground/85">
-                      Parcheggio ampio nelle vicinanze. Centro commerciale a pochi
-                      minuti. Comodo da Scandicci, Firenze, Calenzano.
+                      Parcheggio nelle vicinanze. Comodo da tutta Firenze, Scandicci,
+                      Sesto Fiorentino e Campi Bisenzio.
                     </div>
                   </div>
                 </li>
@@ -176,12 +176,14 @@ function ContactPage() {
             <div className="md:col-span-7">
               <div className="aspect-[4/3] overflow-hidden border border-border md:aspect-[16/11]">
                 <iframe
-                  title="Mappa Rondinella Padel Club — Sesto Fiorentino"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=11.18%2C43.82%2C11.24%2C43.86&layer=mapnik"
+                  title="Mappa Rondinella Padel Club — Via Edoardo Detti, Firenze"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=11.2155%2C43.7935%2C11.2355%2C43.8035&layer=mapnik&marker=43.7985%2C11.2255"
                   className="h-full w-full grayscale invert-[0.92]"
                   loading="lazy"
                 />
               </div>
+            </div>
+
             </div>
           </div>
         </div>
