@@ -476,7 +476,7 @@ function Tournaments() {
               {[
                 {
                   d: "VEN",
-                  t: "Americana settimanale",
+                  t: "Serata di gioco",
                   s: "Tutti i livelli · iscrizione singola",
                   h: "20:00",
                 },
