@@ -27,10 +27,11 @@ function ClubPage() {
     <PageShell>
       <PageHero
         eyebrow="Il Club"
-        title="Un posto"
-        italicWord="dove tornare."
-        description="Sport, amici, famiglia. Tre parole semplici che raccontano davvero come si vive il Rondinella ogni giorno."
+        title="Il padel"
+        italicWord="a Firenze."
+        description="Quattro campi coperti, tre maestri FITP, corsi e lezioni per ogni livello. Uno sport club dedicato al padel, aperto a tutti."
         image={clubImg}
+
       />
 
       <section className="bg-background py-24 md:py-32">
