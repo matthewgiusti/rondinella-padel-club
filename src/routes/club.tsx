@@ -234,11 +234,12 @@ function ClubPage() {
         />
         <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
           <h2 className="max-w-3xl font-serif text-3xl italic leading-snug md:text-5xl">
-            "Qui non ci si sente ospiti. Ci si sente del posto."
+            "Campi coperti, maestri certificati e padel tutto l'anno. A Firenze."
           </h2>
           <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.22em]">
-            — Un socio, una sera qualsiasi
+            — Rondinella Padel Club
           </p>
+
         </div>
       </section>
     </PageShell>
