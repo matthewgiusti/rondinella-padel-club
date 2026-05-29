@@ -66,26 +66,27 @@ export function SiteFooter() {
 
           <div className="md:col-span-4">
             <p className="eyebrow">Vieni a trovarci</p>
-            <ul className="mt-6 space-y-4 text-sm text-foreground/80">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-brand" />
                 <span>
-                  Via della Rondinella, 50019
+                  Via Edoardo Detti, 23
                   <br />
-                  Sesto Fiorentino · Firenze
+                  50143 Firenze (FI)
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-brand" />
                 <a href="tel:+393712615" className="hover:text-brand">
-                  +39 000 000 0000
+                  +39 3712615
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-brand" />
-                <a href="mailto:info@rondinellapadel.it" className="hover:text-brand">
-                  info@rondinellapadel.it
+                <a href="mailto:info@rondinellapadelclub.it" className="hover:text-brand">
+                  info@rondinellapadelclub.it
                 </a>
+              </li>
+
               </li>
             </ul>
           </div>
