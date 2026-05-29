@@ -5,6 +5,7 @@ import { Instagram, MessageCircle, MapPin, Mail, Phone } from "lucide-react";
 const WHATSAPP =
   "https://wa.me/393712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
