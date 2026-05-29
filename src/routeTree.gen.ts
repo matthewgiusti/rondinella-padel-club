@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WheelchairRouteImport } from './routes/wheelchair'
+import { Route as ServiziRouteImport } from './routes/servizi'
 import { Route as CorsiRouteImport } from './routes/corsi'
 import { Route as ContattiRouteImport } from './routes/contatti'
 import { Route as ClubRouteImport } from './routes/club'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const WheelchairRoute = WheelchairRouteImport.update({
   id: '/wheelchair',
   path: '/wheelchair',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServiziRoute = ServiziRouteImport.update({
+  id: '/servizi',
+  path: '/servizi',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CorsiRoute = CorsiRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/club': typeof ClubRoute
   '/contatti': typeof ContattiRoute
   '/corsi': typeof CorsiRoute
+  '/servizi': typeof ServiziRoute
   '/wheelchair': typeof WheelchairRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/club': typeof ClubRoute
   '/contatti': typeof ContattiRoute
   '/corsi': typeof CorsiRoute
+  '/servizi': typeof ServiziRoute
   '/wheelchair': typeof WheelchairRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,22 @@ export interface FileRoutesById {
   '/club': typeof ClubRoute
   '/contatti': typeof ContattiRoute
   '/corsi': typeof CorsiRoute
+  '/servizi': typeof ServiziRoute
   '/wheelchair': typeof WheelchairRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/club' | '/contatti' | '/corsi' | '/wheelchair'
+  fullPaths: '/' | '/club' | '/contatti' | '/corsi' | '/servizi' | '/wheelchair'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/club' | '/contatti' | '/corsi' | '/wheelchair'
-  id: '__root__' | '/' | '/club' | '/contatti' | '/corsi' | '/wheelchair'
+  to: '/' | '/club' | '/contatti' | '/corsi' | '/servizi' | '/wheelchair'
+  id:
+    | '__root__'
+    | '/'
+    | '/club'
+    | '/contatti'
+    | '/corsi'
+    | '/servizi'
+    | '/wheelchair'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +92,7 @@ export interface RootRouteChildren {
   ClubRoute: typeof ClubRoute
   ContattiRoute: typeof ContattiRoute
   CorsiRoute: typeof CorsiRoute
+  ServiziRoute: typeof ServiziRoute
   WheelchairRoute: typeof WheelchairRoute
 }
 
@@ -86,6 +103,13 @@ declare module '@tanstack/react-router' {
       path: '/wheelchair'
       fullPath: '/wheelchair'
       preLoaderRoute: typeof WheelchairRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/servizi': {
+      id: '/servizi'
+      path: '/servizi'
+      fullPath: '/servizi'
+      preLoaderRoute: typeof ServiziRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/corsi': {
@@ -124,8 +148,19 @@ const rootRouteChildren: RootRouteChildren = {
   ClubRoute: ClubRoute,
   ContattiRoute: ContattiRoute,
   CorsiRoute: CorsiRoute,
+  ServiziRoute: ServiziRoute,
   WheelchairRoute: WheelchairRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
