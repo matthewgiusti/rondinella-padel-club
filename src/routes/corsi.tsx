@@ -13,7 +13,7 @@ export const Route = createFileRoute("/corsi")({
       {
         name: "description",
         content:
-          "Corsi e lezioni di padel a Firenze: prova gratuita, corsi di gruppo, lezioni private. Tre maestri FITP, gruppi piccoli, percorsi per ogni livello.",
+          "Corsi e lezioni di padel a Firenze: corsi stagionali, lezioni con maestro da 1 a 4 persone, pacchetti e partite guidate. Tre maestri FITP, gruppi piccoli.",
       },
       { property: "og:title", content: "Corsi & Lezioni — Rondinella Padel Club" },
       { property: "og:url", content: "/corsi" },
