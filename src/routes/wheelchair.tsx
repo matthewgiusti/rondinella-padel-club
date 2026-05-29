@@ -111,7 +111,7 @@ function WheelchairPage() {
               "Campi accessibili dall'ingresso agli spogliatoi",
               "Istruttori formati al wheelchair padel",
               "Sedie sportive disponibili in prova",
-              "Gruppi misti aperti a tutti i soci",
+              "Gruppi misti aperti a tutti i giocatori",
             ].map((p) => (
               <li
                 key={p}
