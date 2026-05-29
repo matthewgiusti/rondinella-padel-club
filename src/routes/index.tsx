@@ -458,7 +458,7 @@ function Tournaments() {
               .
             </h2>
             <p className="mt-8 text-base leading-relaxed text-foreground/80">
-              Americane del venerdì, tornei interni e tappe FITP ufficiali. Un
+              Tornei sociali, serate di gioco e tappe FITP ufficiali. Un
               calendario pensato per chi vuole giocare con continuità e mettersi alla
               prova.
             </p>
