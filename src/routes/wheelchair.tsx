@@ -85,7 +85,7 @@ function WheelchairPage() {
               },
               {
                 t: "Partite miste",
-                d: "Sessioni di gioco con altri soci del club. Per chi gioca da tempo e cerca compagni.",
+                d: "Sessioni di gioco con altri giocatori del club. Per chi gioca da tempo e cerca compagni.",
                 p: "Aperte",
               },
             ].map((c) => (
