@@ -37,7 +37,7 @@ function HomePage() {
       <Courts />
       <Lessons />
       <Wheelchair />
-      <Tournaments />
+      
       <Testimonials />
       <WhatsAppCTA />
       <Visit />
@@ -434,86 +434,6 @@ function Wheelchair() {
               </p>
             </div>
 
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ----------------------------- TOURNAMENTS ---------------------------- */
-function Tournaments() {
-  return (
-    <section className="border-t border-border bg-background py-24 md:py-32">
-      <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-        <div className="grid gap-16 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <p className="eyebrow">Tornei & Eventi</p>
-            <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-6xl">
-              Si gioca
-              <br />
-              <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
-                tutto l'anno
-              </span>
-              .
-            </h2>
-            <p className="mt-8 text-base leading-relaxed text-foreground/80">
-              Tornei sociali, serate di gioco e tappe FITP ufficiali. Un
-              calendario pensato per chi vuole giocare con continuità e mettersi alla
-              prova.
-            </p>
-          </div>
-
-          <div className="md:col-span-7">
-            <ul className="divide-y divide-border border-y border-border">
-              {[
-                {
-                  d: "VEN",
-                  t: "Serata di gioco",
-                  s: "Tutti i livelli · iscrizione singola",
-                  h: "20:00",
-                },
-                {
-                  d: "21 GIU",
-                  t: "Torneo sociale d'estate",
-                  s: "Maschile · Femminile · Misto",
-                  h: "Weekend",
-                },
-                {
-                  d: "12 LUG",
-                  t: "Tappa FITP Bronze",
-                  s: "Open · gara federale",
-                  h: "Sabato + Domenica",
-                },
-                {
-                  d: "27 LUG",
-                  t: "Notte del padel",
-                  s: "Partite + cena sociale + musica",
-                  h: "Dalle 19:00",
-                },
-              ].map((e) => (
-                <li
-                  key={e.t}
-                  className="group flex flex-col gap-2 py-6 transition-colors hover:bg-surface/40 md:flex-row md:items-center md:gap-8"
-                >
-                  <div className="w-24 font-display text-sm font-bold text-brand">
-                    {e.d}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-display text-lg font-bold uppercase tracking-tight md:text-xl">
-                      {e.t}
-                    </h3>
-                    <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                      {e.s}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-foreground/70">
-                    <Clock size={12} />
-                    {e.h}
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </div>
