@@ -332,22 +332,19 @@ function Lessons() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
             {
-              t: "Prima volta",
-              d: "Una lezione di prova gratuita per capire se il padel fa per te. Pala e palline le mettiamo noi.",
-              p: "Gratis",
-              c: "Su appuntamento",
+              t: "Corsi stagionali",
+              d: "Percorso continuativo in piccolo gruppo, con appuntamento fisso. Anche corso agonisti.",
+              c: "Settembre → giugno",
             },
             {
-              t: "Corsi di gruppo",
-              d: "Massimo 4 persone per maestro. Tecnica, regole, scambi veri da subito.",
-              p: "Da 30€",
-              c: "Pomeriggio · sera",
+              t: "Lezioni con maestro",
+              d: "Da 1 a 4 persone, nei formati da 60 e 90 minuti. Singole o in pacchetti da 5, 10 o 15.",
+              c: "Per ogni livello",
             },
             {
-              t: "Lezione privata",
-              d: "Tu (o tu e il tuo compagno) e il maestro. Per migliorare in fretta.",
-              p: "Da 50€",
-              c: "7 giorni su 7",
+              t: "Partite guidate",
+              d: "Giochi una partita vera con il maestro che corregge tattica ed errori sul momento.",
+              c: "Con il maestro",
             },
           ].map((c) => (
             <div
@@ -361,13 +358,16 @@ function Lessons() {
               <p className="mt-5 flex-1 text-sm leading-relaxed text-foreground/70">
                 {c.d}
               </p>
-              <div className="mt-10 flex items-end justify-between border-t border-border pt-6">
-                <span className="font-display text-base font-bold">{c.p}</span>
+              <Link
+                to="/corsi"
+                className="mt-10 flex items-center justify-between border-t border-border pt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/80 transition-colors hover:text-brand"
+              >
+                Scopri di più
                 <ArrowRight
                   size={20}
                   className="text-foreground/40 transition-all group-hover:translate-x-1 group-hover:text-brand"
                 />
-              </div>
+              </Link>
             </div>
           ))}
         </div>
