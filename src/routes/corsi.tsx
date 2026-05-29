@@ -121,7 +121,8 @@ function CoursesPage() {
               <ul className="space-y-5">
                 {[
                   "Scontistica garantita sulla quota campo",
-                  "Prenotazioni fino a due settimane di anticipo",
+                  "Priorità di prenotazione fino a 15 giorni di anticipo",
+                  "Assicurazione sanitaria inclusa",
                   "Accesso ai tornei sociali del club",
                   "T-shirt ufficiale del club in omaggio",
                   "Sconti e offerte con i partner del club",
