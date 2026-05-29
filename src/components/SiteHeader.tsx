@@ -12,8 +12,7 @@ const nav = [
   { to: "/contatti", label: "Contatti" },
 ];
 
-const WHATSAPP =
-  "https://wa.me/393293712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+const PLAYTOMIC = "https://playtomic.com/clubs/rondinella-padel-club";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
