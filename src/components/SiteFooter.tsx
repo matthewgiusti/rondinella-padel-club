@@ -48,7 +48,7 @@ export function SiteFooter() {
                 ["/", "Home"],
                 ["/corsi", "Corsi & Lezioni"],
                 ["/wheelchair", "Wheelchair"],
-                ["/news", "News & Tornei"],
+                
                 ["/club", "Il Club"],
                 ["/contatti", "Contatti"],
               ].map(([to, label]) => (

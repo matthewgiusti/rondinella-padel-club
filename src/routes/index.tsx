@@ -462,13 +462,6 @@ function Tournaments() {
               calendario pensato per chi vuole giocare con continuità e mettersi alla
               prova.
             </p>
-
-            <Link
-              to="/news"
-              className="mt-8 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand"
-            >
-              Calendario completo <ArrowRight size={14} />
-            </Link>
           </div>
 
           <div className="md:col-span-7">
