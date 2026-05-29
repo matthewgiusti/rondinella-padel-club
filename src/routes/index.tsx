@@ -61,7 +61,7 @@ function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-transparent" />
 
       <div className="relative mx-auto w-full max-w-[1400px] px-5 pb-20 pt-32 md:px-10 md:pb-28">
-        <p className="eyebrow animate-fade-up">Firenze · Scandicci · Sesto Fiorentino</p>
+        <p className="eyebrow animate-fade-up">Padel a Firenze · Coperto · Tutti i livelli</p>
         <h1 className="mt-6 max-w-5xl font-display text-[44px] font-black uppercase leading-[0.92] tracking-tight text-foreground animate-fade-up md:text-[120px]">
           Gioca.
           <br />
