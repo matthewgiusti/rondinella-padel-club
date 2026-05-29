@@ -51,7 +51,7 @@ function ContactPage() {
               {
                 i: MessageCircle,
                 t: "WhatsApp",
-                v: "+39 000 000 0000",
+                v: "+39 3712615",
                 a: WHATSAPP,
                 cta: "Scrivici",
                 hl: true,
@@ -59,24 +59,25 @@ function ContactPage() {
               {
                 i: Phone,
                 t: "Telefono",
-                v: "+39 000 000 0000",
+                v: "+39 3712615",
                 a: "tel:+393712615",
                 cta: "Chiama",
               },
               {
                 i: Mail,
                 t: "Email",
-                v: "info@rondinellapadel.it",
-                a: "mailto:info@rondinellapadel.it",
+                v: "info@rondinellapadelclub.it",
+                a: "mailto:info@rondinellapadelclub.it",
                 cta: "Invia",
               },
               {
                 i: Instagram,
                 t: "Instagram",
-                v: "@rondinellapadel",
-                a: "https://instagram.com",
+                v: "@rondinellapadelclub",
+                a: "https://instagram.com/rondinellapadelclub",
                 cta: "Seguici",
               },
+
             ].map((c) => (
               <a
                 key={c.t}
