@@ -7,7 +7,7 @@ const nav = [
   { to: "/", label: "Home" },
   { to: "/corsi", label: "Corsi & Lezioni" },
   { to: "/wheelchair", label: "Wheelchair" },
-  { to: "/news", label: "News" },
+  
   { to: "/club", label: "Il Club" },
   { to: "/contatti", label: "Contatti" },
 ];
