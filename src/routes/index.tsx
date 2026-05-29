@@ -532,8 +532,8 @@ function WhatsAppCTA() {
           .
         </h2>
         <p className="mt-8 max-w-xl text-base leading-relaxed text-brand-foreground/80 md:text-lg">
-          Disponibilità campi, info su corsi, lezioni o Wheelchair — su
-          WhatsApp rispondiamo entro pochi minuti.
+          Disponibilità campi, info su corsi e lezioni. <br />
+          Su WhatsApp rispondiamo entro pochi minuti.
         </p>
         <a
           href={WHATSAPP}
