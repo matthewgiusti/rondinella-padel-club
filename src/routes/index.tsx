@@ -531,28 +531,29 @@ function Tournaments() {
 function Testimonials() {
   const items = [
     {
-      q: "Sono entrata per una lezione di prova. Tre mesi dopo ho una squadra fissa il martedì.",
+      q: "Sono entrata per una lezione di prova e ho continuato con il corso. In pochi mesi gioco partite vere.",
       n: "Giulia",
-      r: "Socia dal 2024",
+      r: "Allieva corso base",
     },
     {
-      q: "Mio figlio gioca, io gioco, mia moglie tifa al bar. È diventato il posto della famiglia.",
+      q: "Campi sempre in ordine e coperti: gioco anche d'inverno, senza pensieri. Prenotare è semplicissimo.",
       n: "Andrea",
-      r: "Socio dal 2022",
+      r: "Gioca dal 2022",
     },
     {
-      q: "Non avevo mai fatto sport in vita mia. Qui sono partito da zero senza sentirmi fuori posto.",
+      q: "Non avevo mai fatto sport. Qui sono partito da zero con i maestri, al mio ritmo e senza pressioni.",
       n: "Federico",
-      r: "Socio dal 2025",
+      r: "Lezioni private",
     },
   ];
   return (
     <section className="border-t border-border bg-surface py-24 md:py-32">
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-        <p className="eyebrow">Le voci del club</p>
+        <p className="eyebrow">Dicono di noi</p>
         <h2 className="mt-6 font-display text-3xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
-          Cosa dicono i nostri soci
+          Chi gioca al Rondinella
         </h2>
+
         <div className="mt-14 grid gap-10 md:grid-cols-3">
           {items.map((t) => (
             <figure key={t.n} className="flex flex-col">
