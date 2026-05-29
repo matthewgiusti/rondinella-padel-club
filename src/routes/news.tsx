@@ -77,7 +77,7 @@ function NewsPage() {
         eyebrow="News, Tornei & Eventi"
         title="Cosa succede"
         italicWord="al club."
-        description="Tornei FITP, tornei sociali, serate e tutte le novità del Rondinella. Aggiornato settimanalmente."
+        description="Tornei FITP, tornei sociali, serate e tutte le novità del RPC. Aggiornato settimanalmente."
         image={tournamentImg}
       />
 

@@ -47,7 +47,7 @@ export function SiteFooter() {
               {[
                 ["/", "Home"],
                 ["/corsi", "Corsi & Lezioni"],
-                ["/wheelchair", "Wheelchair Padel"],
+                ["/wheelchair", "Wheelchair"],
                 ["/news", "News & Tornei"],
                 ["/club", "Il Club"],
                 ["/contatti", "Contatti"],

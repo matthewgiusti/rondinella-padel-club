@@ -29,10 +29,10 @@ function WheelchairPage() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Wheelchair Padel"
+        eyebrow="Wheelchair"
         title="Lo sport"
         italicWord="è di tutti."
-        description="Al Rondinella il wheelchair padel è una parte vera del club. Campi accessibili, istruttori dedicati e sessioni aperte a tutti i livelli."
+        description="Al RPC il Wheelchair è una parte vera del club. Campi accessibili, istruttori dedicati e sessioni aperte a tutti i livelli."
         image={communityImg}
 
       />
@@ -114,7 +114,7 @@ function WheelchairPage() {
           <ul className="mt-16 grid gap-5 md:grid-cols-2">
             {[
               "Campi accessibili dall'ingresso agli spogliatoi",
-              "Istruttori formati al wheelchair padel",
+              "Istruttori formati al Wheelchair",
               "Sedie sportive disponibili in prova",
               "Gruppi misti aperti a tutti i giocatori",
             ].map((p) => (
