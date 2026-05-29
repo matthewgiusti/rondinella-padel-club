@@ -32,8 +32,9 @@ function WheelchairPage() {
         eyebrow="Wheelchair Padel"
         title="Lo sport"
         italicWord="è di tutti."
-        description="Al Rondinella il wheelchair padel è una parte vera del club. Campi accessibili, istruttori dedicati e una community che gioca insieme."
+        description="Al Rondinella il wheelchair padel è una parte vera del club. Campi accessibili, istruttori dedicati e sessioni aperte a tutti i livelli."
         image={communityImg}
+
       />
 
       <section className="bg-background py-24 md:py-32">
