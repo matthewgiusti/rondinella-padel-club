@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WHATSAPP =
-  "https://wa.me/393712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+  "https://wa.me/393293712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
 function HomePage() {
   return (
@@ -593,7 +593,7 @@ function Visit() {
                   <div className="text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
                     Contatto rapido
                   </div>
-                  <div className="mt-1 text-foreground/85">+39 3712615</div>
+                  <div className="mt-1 text-foreground/85">+39 329 3712615</div>
                 </div>
               </li>
             </ul>

@@ -21,7 +21,7 @@ export const Route = createFileRoute("/contatti")({
 });
 
 const WHATSAPP =
-  "https://wa.me/393712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
+  "https://wa.me/393293712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
 function ContactPage() {
   return (
@@ -51,7 +51,7 @@ function ContactPage() {
               {
                 i: MessageCircle,
                 t: "WhatsApp",
-                v: "+39 3712615",
+                v: "+39 329 3712615",
                 a: WHATSAPP,
                 cta: "Scrivici",
                 hl: true,
@@ -59,8 +59,8 @@ function ContactPage() {
               {
                 i: Phone,
                 t: "Telefono",
-                v: "+39 3712615",
-                a: "tel:+393712615",
+                v: "+39 329 3712615",
+                a: "tel:+393293712615",
                 cta: "Chiama",
               },
               {
