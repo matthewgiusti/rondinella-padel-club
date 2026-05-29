@@ -104,8 +104,9 @@ function Hero() {
             ["04", "Campi"],
             ["03", "Coperti"],
             ["FITP", "Maestri certificati"],
-            ["7 / 24", "Sempre aperti"],
+            ["7/7", "Aperti tutti i giorni"],
           ].map(([n, l]) => (
+
             <div key={l}>
               <div className="font-display text-2xl font-black text-brand md:text-3xl">
                 {n}
