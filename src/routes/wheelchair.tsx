@@ -13,7 +13,7 @@ export const Route = createFileRoute("/wheelchair")({
       {
         name: "description",
         content:
-          "Wheelchair padel a Firenze: campi accessibili, istruttori formati, gruppi misti. Lo sport è di tutti, davvero.",
+          "Wheelchair padel a Firenze dal 2023: campi accessibili, istruttori formati e carrozzine dedicate. Progetto premiato dalla FITP come Miglior Progetto Sociale in Toscana 2023.",
       },
       { property: "og:title", content: "Wheelchair Padel — Rondinella Padel Club" },
       { property: "og:url", content: "/wheelchair" },
