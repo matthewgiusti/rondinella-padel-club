@@ -159,23 +159,24 @@ function Identity() {
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-7xl">
               Un club fatto
               <br />
-              di{" "}
+              per{" "}
               <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
-                persone
+                giocare
               </span>
               .
             </h2>
           </div>
           <div className="md:col-span-5 md:col-start-8">
             <p className="text-base leading-relaxed text-foreground/85 md:text-lg">
-              Rondinella è uno sport club di Firenze nord nato per chi ama muoversi
-              insieme agli altri. Famiglie, gruppi di amici, ex sportivi, principianti
-              curiosi: qui si gioca a padel ma soprattutto si sta bene.
+              Rondinella è uno sport club di Firenze dedicato al padel. Quattro campi
+              coperti, maestri federali e un calendario di corsi e lezioni pensati per
+              ogni livello, dai principianti agli agonisti.
             </p>
             <p className="mt-5 text-base leading-relaxed text-foreground/70 md:text-lg">
-              Niente snob, nessuna iscrizione obbligatoria, nessun livello minimo.
-              Prenoti, vieni, giochi. Il resto succede da sé.
+              Nessuna iscrizione obbligatoria, nessun livello minimo. Prenoti, vieni,
+              giochi.
             </p>
+
             <Link
               to="/club"
               className="mt-8 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand"
