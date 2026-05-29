@@ -66,6 +66,7 @@ export function SiteFooter() {
 
           <div className="md:col-span-4">
             <p className="eyebrow">Vieni a trovarci</p>
+            <ul className="mt-6 space-y-4 text-sm text-foreground/80">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 text-brand" />
                 <span>
@@ -86,10 +87,9 @@ export function SiteFooter() {
                   info@rondinellapadelclub.it
                 </a>
               </li>
-
-              </li>
             </ul>
           </div>
+
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:flex-row md:items-center">
