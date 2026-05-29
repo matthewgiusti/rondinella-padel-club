@@ -1,47 +1,40 @@
-# Logo reale + correzione contenuti (corsi, lezioni, tornei)
+## Obiettivo
 
-Due interventi: (1) integrare il logo/icona PNG forniti, (2) correggere i contenuti di corsi/lezioni e tornei secondo le indicazioni — **nessun prezzo online**, solo informazione sulle possibilità.
+Migliorare i contenuti testuali del nuovo sito riutilizzando le informazioni reali presenti su rondinellapadelclub.it, senza reintrodurre prezzi e mantenendo il tono accessibile e non elitario già concordato. Nessuna modifica funzionale o di layout: solo testo (e qualche blocco informativo in più con i componenti esistenti).
 
-## 1. Logo e icona reali
-- Copiare i file forniti negli asset del progetto:
-  - `logo_rondinella_giallo_bianco(1).png` → `src/assets/logo-rondinella.png` (wordmark giallo, sfondo trasparente — ideale su header/footer scuri).
-  - `RONDINELLA_ICON.jpg` → `public/favicon.jpg` (per favicon) e `src/assets/rondinella-icon.jpg` (marchio compatto).
-- **`src/components/Logo.tsx`**: sostituire l'attuale SVG ricostruito con i file reali.
-  - `variant="full"` → `<img>` del wordmark PNG, con sottotitolo testuale "PADEL CLUB" opzionale sotto (il PNG contiene solo "RONDINELLA").
-  - `variant="mark"` → `<img>` dell'icona rondine.
-  - `alt="Rondinella Padel Club"`, dimensioni gestite via `className` come ora; mantenere l'uso esistente in `SiteHeader`, `SiteFooter`.
-- **`src/routes/__root.tsx`**: aggiungere il favicon nei `links` (`rel="icon"` → `/favicon.jpg`) e impostare `og:image`/`twitter:image` solo sulle route foglia dove utile (facoltativo).
+## Cosa ho trovato di nuovo e utile sul sito online
 
-## 2. Offerta da comunicare (senza prezzi)
-Basata sul documento, descritta solo a parole:
-- **Tesseramento stagionale** (settembre–agosto): scontistica sulla quota campo, prenotazioni con due settimane di anticipo, accesso ai tornei sociali, t-shirt ufficiale, vantaggi coi partner, accesso alle lezioni. Per tesserarsi: documento + visita medica sportiva valida.
-- **Partite** (90 minuti): prenotabili tutti i giorni; menzionare la disponibilità senza importi.
-- **Lezioni con maestro** — singola, coppia, tripla, quadrupla (da 1 a 4 persone), disponibili nei formati **60 e 90 minuti**.
-- **Pacchetti di lezioni** — da 5, 10 o 15 lezioni, da 1 a 4 persone.
-- **Corsi stagionali** e **Corso agonisti**, percorsi continuativi nella stagione.
-- **Partite guidate** col maestro, per migliorare tattica e correggere gli errori in partita.
-- Eliminare ovunque "prova gratuita" e qualunque prezzo (es. "Gratis", "240€", "Da 50€").
+- **Wheelchair**: una storia reale e credibile oggi completamente assente dal nuovo sito (progetto dal settembre 2023, partner, traguardi, premio FITP).
+- **Tesseramento**: benefit reali tra cui l'**assicurazione sanitaria** (oggi non citata) e la priorità di prenotazione.
+- **Struttura**: descrizione "campi panoramici di ultima generazione, tutti coperti" e servizi vicini.
 
-## 3. `src/routes/corsi.tsx`
-- Sostituire le 4 card a prezzo con card **informative senza prezzo**: Corsi stagionali, Lezioni spot (1–4 persone, 60/90 min), Pacchetti (5/10/15), Partite guidate. Togliere campo prezzo, etichetta "Inizia da qui" e CTA per card (resta una CTA WhatsApp generica per informazioni).
-- Aggiungere un blocco informativo su **Tesseramento** e relativi vantaggi.
-- Hero + `meta description`: rimuovere riferimenti a prova/prezzi.
-- Sezione CTA finale: da "Prima lezione gratuita / Senza impegno" a invito generico a chiedere info su WhatsApp.
+## Modifiche previste
 
-## 4. `src/routes/index.tsx`
-- Hero: pulsante "Prova gratuita" → CTA generica (es. "Scopri i corsi").
-- Ticker: "Americane del venerdì" → voce generica (es. "Tornei sociali").
-- Pillars: "americane e tornei FITP" → "tornei sociali e FITP".
-- Anteprima corsi (card "Gratis / Da 30€ / Da 50€"): rimuovere prezzi e card prova gratuita; sostituire con le possibilità reali (lezioni 1–4 persone, pacchetti, partite guidate) senza prezzo.
-- Sezione "Tornei & Eventi": rimuovere "Americana/e"; descrivere tornei sociali e FITP in modo generico.
-- WhatsApp CTA: togliere "prova gratuita".
+### 1. `src/routes/wheelchair.tsx` — il miglioramento più importante
+Aggiungere la storia reale del progetto, oggi mancante:
+- Nel blocco introduttivo: il **Progetto Wheelchair** è attivo **dal settembre 2023**, nato per aprire il padel alle persone con disabilità motoria e abbattere le barriere.
+- Nuova sezione **"I traguardi"** con i risultati reali: oltre **5 Open Day** organizzati, il **primo Torneo Misto Wheelchair** con 20 atleti, il premio **FITP "Miglior Progetto Sociale in Toscana 2023"**.
+- Nuova sezione **"Insieme a noi"** con i partner del progetto citati come testo: Spingi la Vita Onlus, Fondazione Decathlon, Decathlon Italia, Rotary Club Firenze Est, Gabriele Borgogni Onlus, ConsorzioBlu, Gruppo Sportivo Unità Spinale.
+- Aggiungere il riferimento al percorso verso l'**agonismo** (con ConsorzioBlu e GS Unità Spinale) e a **carrozzine da padel dedicate** disponibili in prova.
+- Aggiornare la meta description per includere il riconoscimento e l'anno di avvio.
 
-## 5. `src/routes/news.tsx`
-- `meta description`, hero description e voce "Americana del venerdì": eliminare il termine "americane"; usare "tornei sociali" / "serate di gioco", mantenendo i tornei FITP.
+### 2. `src/routes/corsi.tsx` — Tesseramento più completo
+- Aggiungere il benefit **"Assicurazione sanitaria"** alla lista del tesseramento (oggi assente, presente sul sito reale).
+- Allineare la dicitura della priorità a **"Priorità di prenotazione fino a 15 giorni di anticipo"** (come indicato sul sito attuale).
+- Mantenere invariato il resto (nessun prezzo, maestri alla pari).
 
-## 6. `src/routes/wheelchair.tsx`
-- Card "Lezione introduttiva / Gratis" e testo "lezione introduttiva gratuita": rendere generici (es. "Su richiesta"), togliendo la gratuità.
+### 3. `src/routes/club.tsx` — struttura e descrizione
+- Arricchire la descrizione del club richiamando i **campi panoramici di ultima generazione** e i servizi della zona (bar, ristorante, parcheggio ampio, centro commerciale) con il fraseggio reale del sito, mantenendo i dati corretti (3 coperti + 1 semi-coperto, come da scheda club).
+- Nessuna modifica ai numeri/stat già presenti.
 
-## Note tecniche
-- Solo modifiche a contenuti/testo, al componente `Logo`, agli asset e ai link favicon: nessun cambio di routing o logica.
-- Il documento prezzi resta riferimento interno: nessun importo pubblicato.
+### 4. `src/routes/contatti.tsx` — invariato sui dati
+- I dati di contatto e orari restano quelli che hai fornito direttamente (telefono +39 3712615, aperti tutti i giorni 07:00–23:30), che hanno priorità sui valori del vecchio sito.
+
+## Note / coerenza
+- Niente prezzi su nessuna pagina (come concordato).
+- I maestri restano "alla pari", senza distinzione di ruolo.
+- Nessun termine "americane": tornei sociali o FITP.
+- I partner del wheelchair sono citati come testo (nessun logo esterno importato).
+
+## Punto di attenzione (nessuna azione richiesta)
+Sul vecchio sito gli orari risultano diversi (Lun–Ven 8:00–24:00, Sab–Dom 7:00–24:00) e il telefono è indicato come +39 329 3712615. Mantengo i valori che mi hai dato tu; fammi sapere se preferisci usare quelli del sito online.
