@@ -1,38 +1,47 @@
-# Correzione contenuti — Rondinella Padel Club
+# Logo reale + correzione contenuti (corsi, lezioni, tornei)
 
-Aggiorno contatti, indirizzo, mappa, dati legali, staff e tono di voce con i dati reali forniti.
+Due interventi: (1) integrare il logo/icona PNG forniti, (2) correggere i contenuti di corsi/lezioni e tornei secondo le indicazioni — **nessun prezzo online**, solo informazione sulle possibilità.
 
-## Dati reali da applicare
-- **Telefono / WhatsApp:** +39 3712615
-- **Email:** info@rondinellapadelclub.it (prima: info@rondinellapadel.it)
-- **Instagram:** @rondinellapadelclub → instagram.com/rondinellapadelclub
-- **Indirizzo:** Via Edoardo Detti, 23 — 50143 Firenze (FI) (prima: Via della Rondinella, Sesto Fiorentino)
-- **Orari:** tutti i giorni 7:00 – 23:30 (prima: 08:00)
-- **P.IVA:** 07188890482
-- **Maestri:** Dario Satti, Filippo Giacomelli, Nicola Manfredini — tutti maestri FITP alla pari, senza distinzione di ruolo
+## 1. Logo e icona reali
+- Copiare i file forniti negli asset del progetto:
+  - `logo_rondinella_giallo_bianco(1).png` → `src/assets/logo-rondinella.png` (wordmark giallo, sfondo trasparente — ideale su header/footer scuri).
+  - `RONDINELLA_ICON.jpg` → `public/favicon.jpg` (per favicon) e `src/assets/rondinella-icon.jpg` (marchio compatto).
+- **`src/components/Logo.tsx`**: sostituire l'attuale SVG ricostruito con i file reali.
+  - `variant="full"` → `<img>` del wordmark PNG, con sottotitolo testuale "PADEL CLUB" opzionale sotto (il PNG contiene solo "RONDINELLA").
+  - `variant="mark"` → `<img>` dell'icona rondine.
+  - `alt="Rondinella Padel Club"`, dimensioni gestite via `className` come ora; mantenere l'uso esistente in `SiteHeader`, `SiteFooter`.
+- **`src/routes/__root.tsx`**: aggiungere il favicon nei `links` (`rel="icon"` → `/favicon.jpg`) e impostare `og:image`/`twitter:image` solo sulle route foglia dove utile (facoltativo).
 
-> Nota: il numero "+39 3712615" è più corto di un classico mobile italiano (10 cifre). Lo inserisco esattamente così come fornito; se è incompleto basta segnalarmelo e lo correggo.
+## 2. Offerta da comunicare (senza prezzi)
+Basata sul documento, descritta solo a parole:
+- **Tesseramento stagionale** (settembre–agosto): scontistica sulla quota campo, prenotazioni con due settimane di anticipo, accesso ai tornei sociali, t-shirt ufficiale, vantaggi coi partner, accesso alle lezioni. Per tesserarsi: documento + visita medica sportiva valida.
+- **Partite** (90 minuti): prenotabili tutti i giorni; menzionare la disponibilità senza importi.
+- **Lezioni con maestro** — singola, coppia, tripla, quadrupla (da 1 a 4 persone), disponibili nei formati **60 e 90 minuti**.
+- **Pacchetti di lezioni** — da 5, 10 o 15 lezioni, da 1 a 4 persone.
+- **Corsi stagionali** e **Corso agonisti**, percorsi continuativi nella stagione.
+- **Partite guidate** col maestro, per migliorare tattica e correggere gli errori in partita.
+- Eliminare ovunque "prova gratuita" e qualunque prezzo (es. "Gratis", "240€", "Da 50€").
 
-## 1. Contatti, indirizzo e mappa
-- **`SiteHeader.tsx`, `SiteFooter.tsx`, `WhatsAppFab.tsx`, `index.tsx`, `corsi.tsx`, `wheelchair.tsx`, `news.tsx`, `contatti.tsx`:** aggiorno la costante `WHATSAPP` con il numero `393712615`.
-- **`SiteFooter.tsx`:** indirizzo, telefono, email, link Instagram, e P.IVA reale nella riga legale.
-- **`contatti.tsx`:** schede telefono/WhatsApp/email/Instagram, blocco indirizzo, orari, e l'embed mappa centrato su Via Edoardo Detti 23, Firenze.
-- **`index.tsx` (sezione Visit):** indirizzo, orari, contatto rapido e mappa aggiornati.
-- Sostituisco i riferimenti "Sesto Fiorentino / Firenze nord" con **Firenze** dove indicano la sede fisica (eyebrow hero, titoli "Vieni a trovarci").
+## 3. `src/routes/corsi.tsx`
+- Sostituire le 4 card a prezzo con card **informative senza prezzo**: Corsi stagionali, Lezioni spot (1–4 persone, 60/90 min), Pacchetti (5/10/15), Partite guidate. Togliere campo prezzo, etichetta "Inizia da qui" e CTA per card (resta una CTA WhatsApp generica per informazioni).
+- Aggiungere un blocco informativo su **Tesseramento** e relativi vantaggi.
+- Hero + `meta description`: rimuovere riferimenti a prova/prezzi.
+- Sezione CTA finale: da "Prima lezione gratuita / Senza impegno" a invito generico a chiedere info su WhatsApp.
 
-## 2. Dati SEO e structured data
-- **`__root.tsx`:** aggiorno il JSON-LD `SportsClub` (streetAddress, postalCode 50143, addressLocality Firenze) e aggiungo telefono/email. Mantengo `areaServed` (Firenze, Scandicci, Sesto Fiorentino) per la copertura locale delle keyword.
+## 4. `src/routes/index.tsx`
+- Hero: pulsante "Prova gratuita" → CTA generica (es. "Scopri i corsi").
+- Ticker: "Americane del venerdì" → voce generica (es. "Tornei sociali").
+- Pillars: "americane e tornei FITP" → "tornei sociali e FITP".
+- Anteprima corsi (card "Gratis / Da 30€ / Da 50€"): rimuovere prezzi e card prova gratuita; sostituire con le possibilità reali (lezioni 1–4 persone, pacchetti, partite guidate) senza prezzo.
+- Sezione "Tornei & Eventi": rimuovere "Americana/e"; descrivere tornei sociali e FITP in modo generico.
+- WhatsApp CTA: togliere "prova gratuita".
 
-## 3. Staff / maestri (`club.tsx`)
-- Sostituisco le tre schede con ruoli gerarchici (Head Coach / settore donne / settore adulti) con i **tre maestri nominali alla pari**: Dario Satti, Filippo Giacomelli, Nicola Manfredini, tutti etichettati "Maestro FITP", con descrizioni neutre e senza distinzione di ruolo.
+## 5. `src/routes/news.tsx`
+- `meta description`, hero description e voce "Americana del venerdì": eliminare il termine "americane"; usare "tornei sociali" / "serate di gioco", mantenendo i tornei FITP.
 
-## 4. Alleggerimento del tono di voce
-Riduco l'enfasi sulla community (resta presente ma non dominante), spostando il focus su sport, accessibilità e qualità del gioco. Interventi mirati:
-- **`index.tsx`:** ammorbidisco i testi più "community-centrici" (sezione Identity, Pillars, Tornei "si tifa, si resta", CTA), riscrivo la sezione Testimonials in chiave più generica/sportiva, e correggo la stat hero "7 / 24" → "7/7 · Aperti tutti i giorni".
-- **`club.tsx`:** rendo più neutri il valore "Community", la citazione di chiusura ("Un socio, una sera qualsiasi") e i testi introduttivi.
-- **`wheelchair.tsx`:** alleggerisco i riferimenti alla community mantenendo il messaggio di accessibilità.
+## 6. `src/routes/wheelchair.tsx`
+- Card "Lezione introduttiva / Gratis" e testo "lezione introduttiva gratuita": rendere generici (es. "Su richiesta"), togliendo la gratuità.
 
 ## Note tecniche
-- Solo modifiche a contenuti/testo e a una costante link: nessun cambiamento di struttura, routing o logica.
-- La mappa OpenStreetMap viene riposizionata aggiornando i parametri bbox/marker sulle coordinate di Via Edoardo Detti 23, Firenze.
-- Nessuna nuova dipendenza.
+- Solo modifiche a contenuti/testo, al componente `Logo`, agli asset e ai link favicon: nessun cambio di routing o logica.
+- Il documento prezzi resta riferimento interno: nessun importo pubblicato.

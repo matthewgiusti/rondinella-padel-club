@@ -13,7 +13,7 @@ export const Route = createFileRoute("/corsi")({
       {
         name: "description",
         content:
-          "Corsi e lezioni di padel a Firenze: prova gratuita, corsi di gruppo, lezioni private. Tre maestri FITP, gruppi piccoli, percorsi per ogni livello.",
+          "Corsi e lezioni di padel a Firenze: corsi stagionali, lezioni con maestro da 1 a 4 persone, pacchetti e partite guidate. Tre maestri FITP, gruppi piccoli.",
       },
       { property: "og:title", content: "Corsi & Lezioni — Rondinella Padel Club" },
       { property: "og:url", content: "/corsi" },
@@ -38,70 +38,109 @@ function CoursesPage() {
 
       <section className="bg-background py-20 md:py-28">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <p className="eyebrow">Le possibilità</p>
+          <h2 className="mt-6 max-w-2xl font-display text-3xl font-black uppercase leading-[1.05] tracking-tight md:text-4xl">
+            Un modo di giocare
+            <br />
+            <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+              per ognuno
+            </span>
+            .
+          </h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                t: "Prova gratuita",
-                d: "45 minuti con un maestro per capire se il padel ti piace. Pala e palline incluse.",
-                p: "Gratis",
-                hl: true,
+                t: "Corsi stagionali",
+                m: "Settembre → giugno",
+                d: "Percorso continuativo in piccolo gruppo, con appuntamento fisso settimanale. Disponibile anche il corso agonisti per chi vuole spingersi oltre.",
               },
               {
-                t: "Corso base",
-                d: "8 lezioni di gruppo (max 4). Tecnica, regole, primi scambi di coppia.",
-                p: "240€",
+                t: "Lezioni con maestro",
+                m: "Da 1 a 4 persone",
+                d: "Lezioni singole, in coppia, tripla o quadrupla. Disponibili nei formati da 60 e da 90 minuti, per imparare o limare i colpi.",
               },
               {
-                t: "Lezione privata",
-                d: "Uno-a-uno con il maestro. Per partire da zero o limare i colpi.",
-                p: "50€",
+                t: "Pacchetti lezioni",
+                m: "5 · 10 · 15 lezioni",
+                d: "Più lezioni con continuità, da 1 a 4 persone. Lo stesso maestro, lo stesso ritmo, miglioramenti che si vedono.",
               },
               {
-                t: "Pacchetto coppia",
-                d: "10 lezioni in due. Lo stesso campo, lo stesso ritmo.",
-                p: "420€",
+                t: "Partite guidate",
+                m: "Con il maestro in campo",
+                d: "Si gioca una vera partita con il maestro che osserva: tattica, posizionamento e correzione degli errori sul momento.",
               },
             ].map((c) => (
               <div
                 key={c.t}
-                className={`flex flex-col justify-between border bg-surface p-8 transition-colors hover:border-brand ${
-                  c.hl ? "border-brand" : "border-border"
-                }`}
+                className="flex flex-col border border-border bg-surface p-8 transition-colors hover:border-brand"
               >
-                <div>
-                  {c.hl && (
-                    <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.22em] text-brand">
-                      Inizia da qui
-                    </p>
-                  )}
-                  <h3 className="font-display text-2xl font-bold uppercase tracking-tight">
-                    {c.t}
-                  </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-foreground/70">
-                    {c.d}
-                  </p>
-                </div>
-                <div className="mt-10 flex items-end justify-between border-t border-border pt-5">
-                  <span className="font-display text-2xl font-black text-brand">
-                    {c.p}
-                  </span>
-                  <a
-                    href={WHATSAPP}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Richiedi ${c.t}`}
-                  >
-                    <ArrowRight
-                      size={20}
-                      className="text-foreground/40 transition-all hover:translate-x-1 hover:text-brand"
-                    />
-                  </a>
-                </div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand">
+                  {c.m}
+                </p>
+                <h3 className="mt-4 font-display text-2xl font-bold uppercase tracking-tight">
+                  {c.t}
+                </h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-foreground/70">
+                  {c.d}
+                </p>
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-flex items-center gap-2 border-t border-border pt-5 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/80 transition-colors hover:text-brand"
+                >
+                  Chiedi informazioni
+                  <ArrowRight size={14} />
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      <section className="border-t border-border bg-background py-20 md:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <div className="grid gap-16 md:grid-cols-12">
+            <div className="md:col-span-5">
+              <p className="eyebrow">Tesseramento</p>
+              <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-5xl">
+                Entra
+                <br />
+                <span className="font-serif italic text-brand font-normal normal-case tracking-normal">
+                  nel club
+                </span>
+                .
+              </h2>
+              <p className="mt-8 text-base leading-relaxed text-foreground/80">
+                La tessera ha validità stagionale, da settembre ad agosto. Per
+                tesserarti basta presentarti in reception con un documento e la
+                visita medica sportiva in corso di validità.
+              </p>
+            </div>
+            <div className="md:col-span-7">
+              <ul className="space-y-5">
+                {[
+                  "Scontistica garantita sulla quota campo",
+                  "Prenotazioni fino a due settimane di anticipo",
+                  "Accesso ai tornei sociali del club",
+                  "T-shirt ufficiale del club in omaggio",
+                  "Sconti e offerte con i partner del club",
+                  "Accesso alle lezioni con i maestri",
+                ].map((b) => (
+                  <li
+                    key={b}
+                    className="flex items-start gap-4 border-t border-border pt-5 text-sm text-foreground/85"
+                  >
+                    <Check className="mt-0.5 shrink-0 text-brand" size={18} />
+                    {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       <section className="border-t border-border bg-surface py-24 md:py-32">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
@@ -158,13 +197,13 @@ function CoursesPage() {
       <section className="relative overflow-hidden border-t border-border bg-brand py-24 text-brand-foreground md:py-28">
         <div className="relative mx-auto max-w-[1400px] px-5 md:px-10">
           <p className="text-[11px] font-bold uppercase tracking-[0.22em]">
-            Prima lezione gratuita
+            Iniziare è semplice
           </p>
           <h2 className="mt-6 max-w-3xl font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-6xl">
-            Vieni a provare.
+            Trova il corso
             <br />
             <span className="font-serif italic font-normal normal-case tracking-normal">
-              Senza impegno
+              giusto per te
             </span>
             .
           </h2>

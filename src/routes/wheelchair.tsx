@@ -76,7 +76,7 @@ function WheelchairPage() {
               {
                 t: "Lezione introduttiva",
                 d: "Una sessione individuale con un istruttore formato. Per provare, capire, vedere come ci si sente in campo.",
-                p: "Gratis",
+                p: "Su richiesta",
               },
               {
                 t: "Corso settimanale",
@@ -149,7 +149,7 @@ function WheelchairPage() {
                 .
               </h2>
               <p className="mt-6 text-base leading-relaxed text-brand-foreground/80">
-                Ti aspettiamo per una lezione introduttiva gratuita. Bastano una
+                Ti aspettiamo per una lezione introduttiva. Bastano una
                 telefonata o un messaggio: decidiamo insieme orario, istruttore e
                 attrezzatura.
               </p>

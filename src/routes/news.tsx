@@ -15,7 +15,7 @@ export const Route = createFileRoute("/news")({
       {
         name: "description",
         content:
-          "Tornei FITP, americane, eventi sociali e novità del Rondinella Padel Club di Firenze. Resta aggiornato sul calendario del club.",
+          "Tornei FITP, tornei sociali, eventi e novità del Rondinella Padel Club di Firenze. Resta aggiornato sul calendario del club.",
       },
       { property: "og:title", content: "News & Eventi — Rondinella Padel Club" },
       { property: "og:url", content: "/news" },
@@ -63,7 +63,7 @@ const posts = [
 ];
 
 const upcoming = [
-  { d: "VEN", t: "Americana del venerdì", h: "20:00 · settimanale" },
+  { d: "VEN", t: "Serata di gioco", h: "20:00 · settimanale" },
   { d: "21 GIU", t: "Torneo sociale d'estate", h: "Weekend" },
   { d: "12 LUG", t: "Tappa FITP Bronze", h: "Sab + Dom" },
   { d: "27 LUG", t: "Notte del Padel", h: "Dalle 19:00" },
@@ -77,7 +77,7 @@ function NewsPage() {
         eyebrow="News, Tornei & Eventi"
         title="Cosa succede"
         italicWord="al club."
-        description="Tornei FITP, americane, serate e tutte le novità del Rondinella. Aggiornato settimanalmente."
+        description="Tornei FITP, tornei sociali, serate e tutte le novità del Rondinella. Aggiornato settimanalmente."
         image={tournamentImg}
       />
 

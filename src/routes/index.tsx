@@ -91,7 +91,7 @@ function Hero() {
             to="/corsi"
             className="group inline-flex items-center justify-center gap-3 border border-foreground/30 bg-transparent px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.2em] text-foreground transition-all hover:border-brand hover:text-brand"
           >
-            Prova gratuita
+            Scopri i corsi
             <ArrowRight
               size={16}
               className="transition-transform group-hover:translate-x-1"
@@ -129,7 +129,7 @@ function Ticker() {
     "Corsi per tutti",
     "Wheelchair padel",
     "Tornei FITP",
-    "Americane del venerdì",
+    "Tornei sociali",
     "Bar interno",
     "Parcheggio",
     "Aperti 7/7",
@@ -211,7 +211,7 @@ function Pillars() {
     {
       icon: Trophy,
       t: "Corsi, lezioni e tornei",
-      d: "Corsi di gruppo, lezioni private, americane e tornei FITP: un calendario sempre attivo.",
+      d: "Corsi stagionali, lezioni da 1 a 4 persone, partite guidate e tornei sociali e FITP: un calendario sempre attivo.",
     },
 
   ];
@@ -332,22 +332,19 @@ function Lessons() {
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
             {
-              t: "Prima volta",
-              d: "Una lezione di prova gratuita per capire se il padel fa per te. Pala e palline le mettiamo noi.",
-              p: "Gratis",
-              c: "Su appuntamento",
+              t: "Corsi stagionali",
+              d: "Percorso continuativo in piccolo gruppo, con appuntamento fisso. Anche corso agonisti.",
+              c: "Settembre → giugno",
             },
             {
-              t: "Corsi di gruppo",
-              d: "Massimo 4 persone per maestro. Tecnica, regole, scambi veri da subito.",
-              p: "Da 30€",
-              c: "Pomeriggio · sera",
+              t: "Lezioni con maestro",
+              d: "Da 1 a 4 persone, nei formati da 60 e 90 minuti. Singole o in pacchetti da 5, 10 o 15.",
+              c: "Per ogni livello",
             },
             {
-              t: "Lezione privata",
-              d: "Tu (o tu e il tuo compagno) e il maestro. Per migliorare in fretta.",
-              p: "Da 50€",
-              c: "7 giorni su 7",
+              t: "Partite guidate",
+              d: "Giochi una partita vera con il maestro che corregge tattica ed errori sul momento.",
+              c: "Con il maestro",
             },
           ].map((c) => (
             <div
@@ -361,13 +358,16 @@ function Lessons() {
               <p className="mt-5 flex-1 text-sm leading-relaxed text-foreground/70">
                 {c.d}
               </p>
-              <div className="mt-10 flex items-end justify-between border-t border-border pt-6">
-                <span className="font-display text-base font-bold">{c.p}</span>
+              <Link
+                to="/corsi"
+                className="mt-10 flex items-center justify-between border-t border-border pt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/80 transition-colors hover:text-brand"
+              >
+                Scopri di più
                 <ArrowRight
                   size={20}
                   className="text-foreground/40 transition-all group-hover:translate-x-1 group-hover:text-brand"
                 />
-              </div>
+              </Link>
             </div>
           ))}
         </div>
@@ -458,7 +458,7 @@ function Tournaments() {
               .
             </h2>
             <p className="mt-8 text-base leading-relaxed text-foreground/80">
-              Americane del venerdì, tornei interni e tappe FITP ufficiali. Un
+              Tornei sociali, serate di gioco e tappe FITP ufficiali. Un
               calendario pensato per chi vuole giocare con continuità e mettersi alla
               prova.
             </p>
@@ -476,7 +476,7 @@ function Tournaments() {
               {[
                 {
                   d: "VEN",
-                  t: "Americana settimanale",
+                  t: "Serata di gioco",
                   s: "Tutti i livelli · iscrizione singola",
                   h: "20:00",
                 },
@@ -619,7 +619,7 @@ function WhatsAppCTA() {
           .
         </h2>
         <p className="mt-8 max-w-xl text-base leading-relaxed text-brand-foreground/80 md:text-lg">
-          Disponibilità campi, prova gratuita, info sui corsi o wheelchair padel — su
+          Disponibilità campi, info su corsi, lezioni o wheelchair padel — su
           WhatsApp rispondiamo entro pochi minuti.
         </p>
         <a
