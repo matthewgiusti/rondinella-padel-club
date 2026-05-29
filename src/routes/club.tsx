@@ -184,37 +184,41 @@ function ClubPage() {
             .
           </h2>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
-            Tutti e tre certificati FITP, tutti e tre convinti che si insegna meglio
-            quando si crea un ambiente in cui gli allievi vogliono tornare. Tecnica
-            seria, atmosfera leggera.
+            Tutti e tre certificati FITP, tutti e tre alla pari: scegli il maestro o
+            l'orario che preferisci, l'approccio è lo stesso. Tecnica seria e metodo
+            accessibile, dal primo colpo al gioco di coppia.
           </p>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
             {[
               {
-                r: "Head Coach FITP",
-                d: "Coordina il settore corsi e segue gli allievi avanzati e agonisti.",
+                n: "Dario Satti",
+                d: "Maestro FITP. Lavora con principianti, gruppi e agonisti, dal primo approccio al perfezionamento.",
               },
               {
-                r: "Maestra FITP · settore donne & junior",
-                d: "Specializzata nei gruppi femminili, junior e nei percorsi di avviamento.",
+                n: "Filippo Giacomelli",
+                d: "Maestro FITP. Segue corsi e lezioni private per ogni livello, con attenzione a tecnica e tattica.",
               },
               {
-                r: "Maestro FITP · adulti & wheelchair",
-                d: "Lavora con principianti, gruppi adulti e con il programma di wheelchair padel.",
+                n: "Nicola Manfredini",
+                d: "Maestro FITP. Cura percorsi individuali e di gruppo, accompagnando ogni allievo nel suo percorso.",
               },
-            ].map((p, i) => (
+            ].map((p) => (
               <article
-                key={i}
+                key={p.n}
                 className="border border-border bg-background p-8 transition-colors hover:border-brand"
               >
-                <p className="text-[10px] uppercase tracking-[0.22em] text-brand">
-                  {p.r}
+                <h3 className="font-display text-xl font-bold uppercase tracking-tight">
+                  {p.n}
+                </h3>
+                <p className="mt-2 text-[10px] uppercase tracking-[0.22em] text-brand">
+                  Maestro FITP
                 </p>
                 <p className="mt-5 text-sm leading-relaxed text-foreground/70">{p.d}</p>
               </article>
             ))}
           </div>
+
         </div>
       </section>
 
