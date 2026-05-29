@@ -13,7 +13,8 @@ export const Route = createFileRoute("/club")({
       {
         name: "description",
         content:
-          "Quattro campi, tre maestri FITP, una community che gioca insieme. Storia, valori e struttura del Rondinella Padel Club di Firenze nord.",
+          "Quattro campi coperti, tre maestri FITP, corsi e lezioni per ogni livello. Scopri il Rondinella Padel Club di Firenze, in Via Edoardo Detti.",
+
       },
       { property: "og:title", content: "Il Club — Rondinella Padel Club" },
       { property: "og:url", content: "/club" },
