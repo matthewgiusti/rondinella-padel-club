@@ -51,7 +51,7 @@ function ClubPage() {
             </div>
             <div className="md:col-span-7 space-y-6 text-base leading-relaxed text-foreground/85 md:text-lg">
               <p>
-                Il Rondinella Padel Club è uno sport club di Firenze dedicato al padel: quattro
+                Il Rondinella Padel Club è un circolo di Firenze dedicato al padel: quattro
                 campi panoramici di ultima generazione e una struttura comoda,
                 pensata per chi vuole giocare con continuità e migliorare a ogni
                 livello.
