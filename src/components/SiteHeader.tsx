@@ -112,6 +112,7 @@ export function SiteHeader() {
             href={PLAYTOMIC}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackPrenota("mobile-menu")}
             className="mt-6 inline-flex items-center justify-center bg-brand px-5 py-3.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground"
           >
             Prenota
