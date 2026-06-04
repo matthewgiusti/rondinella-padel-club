@@ -142,9 +142,9 @@ function WheelchairPage() {
             .
           </h2>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
-            In pochi anni il Progetto Wheelchair è diventato un punto di riferimento
-            per l'inclusione attraverso lo sport. Vogliamo continuare a crescere e a
-            ispirare altri club, perché il padel sia davvero uno sport per tutti.
+            In pochi anni il Progetto Wheelchair è cresciuto come esperienza di
+            inclusione attraverso lo sport. Vogliamo continuare a crescere insieme,
+            perché il padel sia davvero uno sport per tutti.
           </p>
 
           <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
