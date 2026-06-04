@@ -7,6 +7,25 @@ import {
   APPLE_DIRECTIONS,
   WAZE_DIRECTIONS,
 } from "@/components/MapDirections";
+import { trackPixel } from "@/lib/meta-pixel";
+
+const trackContactCard = (type: string) => {
+  switch (type) {
+    case "WhatsApp":
+      trackPixel("Contact", { method: "whatsapp", source: "contatti" });
+      trackPixel("Scrivici", { location: "contatti" }, "trackCustom");
+      break;
+    case "Telefono":
+      trackPixel("Contact", { method: "phone", source: "contatti" });
+      break;
+    case "Email":
+      trackPixel("Contact", { method: "email", source: "contatti" });
+      break;
+    case "Instagram":
+      trackPixel("SocialClick", { network: "instagram" }, "trackCustom");
+      break;
+  }
+};
 
 export const Route = createFileRoute("/contatti")({
   component: ContactPage,
@@ -90,6 +109,7 @@ function ContactPage() {
                 href={c.a}
                 target={c.a.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
+                onClick={() => trackContactCard(c.t)}
                 className={`group flex flex-col justify-between border p-8 transition-all ${
                   c.hl
                     ? "border-brand bg-brand text-brand-foreground hover:brightness-110"
@@ -185,6 +205,7 @@ function ContactPage() {
                   href={GOOGLE_DIRECTIONS}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackPixel("GetDirections", { provider: "google" }, "trackCustom")}
                   className="inline-flex items-center gap-2 bg-brand px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground transition-all hover:brightness-110"
                 >
                   <Navigation size={14} />
@@ -194,6 +215,7 @@ function ContactPage() {
                   href={WAZE_DIRECTIONS}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackPixel("GetDirections", { provider: "waze" }, "trackCustom")}
                   className="inline-flex items-center gap-2 border border-border px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/85 transition-colors hover:border-brand hover:text-brand"
                 >
                   Waze
@@ -202,6 +224,7 @@ function ContactPage() {
                   href={APPLE_DIRECTIONS}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackPixel("GetDirections", { provider: "apple" }, "trackCustom")}
                   className="inline-flex items-center gap-2 border border-border px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/85 transition-colors hover:border-brand hover:text-brand"
                 >
                   Apple Maps

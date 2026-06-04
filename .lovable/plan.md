@@ -1,40 +1,48 @@
-## Obiettivo
+# Integrazione Meta Pixel — Rondinella Padel Club
 
-Migliorare i contenuti testuali del nuovo sito riutilizzando le informazioni reali presenti su rondinellapadelclub.it, senza reintrodurre prezzi e mantenendo il tono accessibile e non elitario già concordato. Nessuna modifica funzionale o di layout: solo testo (e qualche blocco informativo in più con i componenti esistenti).
+Pixel ID: **1309487903488710**
 
-## Cosa ho trovato di nuovo e utile sul sito online
+Obiettivo: caricare il Meta Pixel su tutto il sito, tracciare la PageView ad ogni cambio pagina e tracciare i click sulle azioni chiave, con eventi facili da usare nelle campagne Meta.
 
-- **Wheelchair**: una storia reale e credibile oggi completamente assente dal nuovo sito (progetto dal settembre 2023, partner, traguardi, premio FITP).
-- **Tesseramento**: benefit reali tra cui l'**assicurazione sanitaria** (oggi non citata) e la priorità di prenotazione.
-- **Struttura**: descrizione "campi panoramici di ultima generazione, tutti coperti" e servizi vicini.
+## 1. Caricamento del Pixel
+- Inserire lo snippet base del Meta Pixel nel layout radice (`src/routes/__root.tsx`), nel blocco `scripts`, così viene caricato su ogni pagina insieme al `<noscript>` di fallback.
+- Inizializzazione una sola volta con `fbq('init', '1309487903488710')`.
 
-## Modifiche previste
+## 2. PageView su ogni pagina
+- Il Pixel invia `PageView` all'avvio. Poiché il sito è una single-page app (TanStack Router), aggiungere un piccolo hook che invia `fbq('track', 'PageView')` ad ogni cambio di rotta, così ogni navigazione interna viene contata correttamente.
+- L'hook viene montato una volta nel componente radice.
 
-### 1. `src/routes/wheelchair.tsx` — il miglioramento più importante
-Aggiungere la storia reale del progetto, oggi mancante:
-- Nel blocco introduttivo: il **Progetto Wheelchair** è attivo **dal settembre 2023**, nato per aprire il padel alle persone con disabilità motoria e abbattere le barriere.
-- Nuova sezione **"I traguardi"** con i risultati reali: oltre **5 Open Day** organizzati, il **primo Torneo Misto Wheelchair** con 20 atleti, il premio **FITP "Miglior Progetto Sociale in Toscana 2023"**.
-- Nuova sezione **"Insieme a noi"** con i partner del progetto citati come testo: Spingi la Vita Onlus, Fondazione Decathlon, Decathlon Italia, Rotary Club Firenze Est, Gabriele Borgogni Onlus, ConsorzioBlu, Gruppo Sportivo Unità Spinale.
-- Aggiungere il riferimento al percorso verso l'**agonismo** (con ConsorzioBlu e GS Unità Spinale) e a **carrozzine da padel dedicate** disponibili in prova.
-- Aggiornare la meta description per includere il riconoscimento e l'anno di avvio.
+## 3. Helper per gli eventi
+- Creare un piccolo helper `src/lib/meta-pixel.ts` con una funzione `trackPixel(event, params?)` che chiama `fbq` in modo sicuro (controllo che `fbq` esista). Tiene il codice pulito e riutilizzabile.
 
-### 2. `src/routes/corsi.tsx` — Tesseramento più completo
-- Aggiungere il benefit **"Assicurazione sanitaria"** alla lista del tesseramento (oggi assente, presente sul sito reale).
-- Allineare la dicitura della priorità a **"Priorità di prenotazione fino a 15 giorni di anticipo"** (come indicato sul sito attuale).
-- Mantenere invariato il resto (nessun prezzo, maestri alla pari).
+## 4. Tracciamento dei click
 
-### 3. `src/routes/club.tsx` — struttura e descrizione
-- Arricchire la descrizione del club richiamando i **campi panoramici di ultima generazione** e i servizi della zona (bar, ristorante, parcheggio ampio, centro commerciale) con il fraseggio reale del sito, mantenendo i dati corretti (3 coperti + 1 semi-coperto, come da scheda club).
-- Nessuna modifica ai numeri/stat già presenti.
+| Azione | Dove | Evento inviato |
+|---|---|---|
+| Prenota (Playtomic) | header desktop + menu mobile (`SiteHeader.tsx`) | `Lead` (standard) + custom `Prenota` |
+| Scrivici WhatsApp | FAB (`WhatsAppFab.tsx`) + card WhatsApp contatti | `Contact` (standard) + custom `Scrivici` |
+| Click telefono | card "Telefono" (`contatti.tsx`) | `Contact` |
+| Click email | card "Email" (`contatti.tsx`) | `Contact` |
+| Click Instagram | card "Instagram" (`contatti.tsx`) | custom `SocialClick` |
+| Click Indicazioni (Google/Waze/Apple) | pulsanti mappa (`contatti.tsx`) | custom `GetDirections` |
 
-### 4. `src/routes/contatti.tsx` — invariato sui dati
-- I dati di contatto e orari restano quelli che hai fornito direttamente (telefono +39 3712615, aperti tutti i giorni 07:00–23:30), che hanno priorità sui valori del vecchio sito.
+Ogni evento custom include parametri descrittivi (es. `{ location: 'header' }`) per distinguere la provenienza nei report.
 
-## Note / coerenza
-- Niente prezzi su nessuna pagina (come concordato).
-- I maestri restano "alla pari", senza distinzione di ruolo.
-- Nessun termine "americane": tornei sociali o FITP.
-- I partner del wheelchair sono citati come testo (nessun logo esterno importato).
+## 5. Scroll depth (opzionale, incluso)
+- Hook leggero che invia `ScrollDepth` al 50% e 90% della pagina, una sola volta per pagina.
 
-## Punto di attenzione (nessuna azione richiesta)
-Sul vecchio sito gli orari risultano diversi (Lun–Ven 8:00–24:00, Sab–Dom 7:00–24:00) e il telefono è indicato come +39 329 3712615. Mantengo i valori che mi hai dato tu; fammi sapere se preferisci usare quelli del sito online.
+## Dettagli tecnici
+- Lo snippet del Pixel è codice di terze parti pubblico (non un segreto), quindi va direttamente nel codice — nessun secret da configurare.
+- Nessun impatto sul layout o sul design: solo aggiunta di handler `onClick` agli elementi esistenti.
+- Compatibile con SSR: lo script `fbq` è no-op lato server e si attiva solo nel browser.
+
+## File coinvolti
+- `src/routes/__root.tsx` — snippet Pixel + noscript
+- `src/lib/meta-pixel.ts` — helper `trackPixel` + hook PageView/scroll (nuovo)
+- `src/components/SiteHeader.tsx` — click Prenota
+- `src/components/WhatsAppFab.tsx` — click Scrivici
+- `src/routes/contatti.tsx` — telefono, email, Instagram, indicazioni, WhatsApp
+
+## Note
+- Non c'è ancora un form di contatto: l'evento `Lead` da form verrà aggiunto quando/se introdurremo il modulo.
+- Se in futuro vuoi anche GA4, GTM o Microsoft Clarity (citati nel tuo documento), li possiamo aggiungere con lo stesso approccio.
