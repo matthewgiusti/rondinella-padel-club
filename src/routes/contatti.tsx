@@ -205,6 +205,7 @@ function ContactPage() {
                   href={GOOGLE_DIRECTIONS}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackPixel("GetDirections", { provider: "google" }, "trackCustom")}
                   className="inline-flex items-center gap-2 bg-brand px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground transition-all hover:brightness-110"
                 >
                   <Navigation size={14} />
@@ -214,6 +215,7 @@ function ContactPage() {
                   href={WAZE_DIRECTIONS}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackPixel("GetDirections", { provider: "waze" }, "trackCustom")}
                   className="inline-flex items-center gap-2 border border-border px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/85 transition-colors hover:border-brand hover:text-brand"
                 >
                   Waze
@@ -222,6 +224,7 @@ function ContactPage() {
                   href={APPLE_DIRECTIONS}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackPixel("GetDirections", { provider: "apple" }, "trackCustom")}
                   className="inline-flex items-center gap-2 border border-border px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-foreground/85 transition-colors hover:border-brand hover:text-brand"
                 >
                   Apple Maps
