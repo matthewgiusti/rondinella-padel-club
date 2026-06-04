@@ -275,6 +275,7 @@ function RootComponent() {
 
   usePixelPageViews();
   usePixelScrollDepth();
+  useGA4PageViews();
 
   return (
     <QueryClientProvider client={queryClient}>
