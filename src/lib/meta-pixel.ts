@@ -2,28 +2,46 @@ import { useEffect, useRef } from "react";
 import { useRouterState } from "@tanstack/react-router";
 
 export const META_PIXEL_ID = "1309487903488710";
+export const GA4_MEASUREMENT_ID = "G-BSTVHFN3MP";
 
 type PixelParams = Record<string, unknown>;
 
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }
 
 /**
- * Safely sends a Meta Pixel event. No-op on the server or before fbq loads.
+ * Safely sends a Google Analytics 4 event. No-op on the server or before gtag loads.
+ */
+export function trackGA(event: string, params?: PixelParams) {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+  window.gtag("event", event, params ?? {});
+}
+
+/**
+ * Safely sends an event to both Meta Pixel and Google Analytics 4.
+ * No-op on the server or before the respective scripts load.
  */
 export function trackPixel(
   event: string,
   params?: PixelParams,
   type: "track" | "trackCustom" = "track",
 ) {
-  if (typeof window === "undefined" || typeof window.fbq !== "function") return;
-  if (params) {
-    window.fbq(type, event, params);
-  } else {
-    window.fbq(type, event);
+  // Meta Pixel
+  if (typeof window !== "undefined" && typeof window.fbq === "function") {
+    if (params) {
+      window.fbq(type, event, params);
+    } else {
+      window.fbq(type, event);
+    }
+  }
+  // Mirror the same event to GA4 (skip PageView — handled by useGA4PageViews)
+  if (event !== "PageView") {
+    trackGA(event, params);
   }
 }
 
