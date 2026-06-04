@@ -77,6 +77,7 @@ export function SiteHeader() {
             href={PLAYTOMIC}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackPrenota("header")}
             className="hidden bg-brand px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-foreground transition-all hover:brightness-110 md:inline-block"
           >
             Prenota
