@@ -9,6 +9,11 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import {
+  META_PIXEL_ID,
+  usePixelPageViews,
+  usePixelScrollDepth,
+} from "@/lib/meta-pixel";
 
 function NotFoundComponent() {
   return (
