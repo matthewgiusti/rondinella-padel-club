@@ -7,6 +7,25 @@ import {
   APPLE_DIRECTIONS,
   WAZE_DIRECTIONS,
 } from "@/components/MapDirections";
+import { trackPixel } from "@/lib/meta-pixel";
+
+const trackContactCard = (type: string) => {
+  switch (type) {
+    case "WhatsApp":
+      trackPixel("Contact", { method: "whatsapp", source: "contatti" });
+      trackPixel("Scrivici", { location: "contatti" }, "trackCustom");
+      break;
+    case "Telefono":
+      trackPixel("Contact", { method: "phone", source: "contatti" });
+      break;
+    case "Email":
+      trackPixel("Contact", { method: "email", source: "contatti" });
+      break;
+    case "Instagram":
+      trackPixel("SocialClick", { network: "instagram" }, "trackCustom");
+      break;
+  }
+};
 
 export const Route = createFileRoute("/contatti")({
   component: ContactPage,
