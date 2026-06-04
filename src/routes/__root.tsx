@@ -228,6 +228,16 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 fbq('init', '${META_PIXEL_ID}');
 fbq('track', 'PageView');`,
       },
+      {
+        src: `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`,
+        async: true,
+      },
+      {
+        children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA4_MEASUREMENT_ID}');`,
+      },
     ],
 
   }),
