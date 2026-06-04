@@ -2,6 +2,12 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { Menu, X } from "lucide-react";
+import { trackPixel } from "@/lib/meta-pixel";
+
+const trackPrenota = (location: string) => {
+  trackPixel("Lead", { content_name: "Prenota", source: location });
+  trackPixel("Prenota", { location }, "trackCustom");
+};
 
 const nav = [
   { to: "/", label: "Home" },
