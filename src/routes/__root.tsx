@@ -11,8 +11,10 @@ import {
 import appCss from "../styles.css?url";
 import {
   META_PIXEL_ID,
+  GA4_MEASUREMENT_ID,
   usePixelPageViews,
   usePixelScrollDepth,
+  useGA4PageViews,
 } from "@/lib/meta-pixel";
 
 function NotFoundComponent() {
