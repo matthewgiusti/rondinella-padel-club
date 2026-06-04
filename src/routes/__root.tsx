@@ -11,8 +11,10 @@ import {
 import appCss from "../styles.css?url";
 import {
   META_PIXEL_ID,
+  GA4_MEASUREMENT_ID,
   usePixelPageViews,
   usePixelScrollDepth,
+  useGA4PageViews,
 } from "@/lib/meta-pixel";
 
 function NotFoundComponent() {
@@ -226,6 +228,16 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 fbq('init', '${META_PIXEL_ID}');
 fbq('track', 'PageView');`,
       },
+      {
+        src: `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`,
+        async: true,
+      },
+      {
+        children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA4_MEASUREMENT_ID}');`,
+      },
     ],
 
   }),
@@ -263,6 +275,7 @@ function RootComponent() {
 
   usePixelPageViews();
   usePixelScrollDepth();
+  useGA4PageViews();
 
   return (
     <QueryClientProvider client={queryClient}>
