@@ -64,6 +64,28 @@ export function usePixelPageViews() {
 }
 
 /**
+ * Fires a GA4 page_view on every client-side route change (SPA navigation).
+ * The base gtag config fires the initial page_view on first load.
+ */
+export function useGA4PageViews() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const first = useRef(true);
+
+  useEffect(() => {
+    if (first.current) {
+      // Initial page_view sent by the base gtag config — skip to avoid double count.
+      first.current = false;
+      return;
+    }
+    trackGA("page_view", {
+      page_path: pathname,
+      page_location: typeof window !== "undefined" ? window.location.href : undefined,
+      page_title: typeof document !== "undefined" ? document.title : undefined,
+    });
+  }, [pathname]);
+}
+
+/**
  * Fires a custom ScrollDepth event at 50% and 90% of the page, once per route.
  */
 export function usePixelScrollDepth() {
