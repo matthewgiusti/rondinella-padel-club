@@ -109,6 +109,7 @@ function ContactPage() {
                 href={c.a}
                 target={c.a.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
+                onClick={() => trackContactCard(c.t)}
                 className={`group flex flex-col justify-between border p-8 transition-all ${
                   c.hl
                     ? "border-brand bg-brand text-brand-foreground hover:brightness-110"
