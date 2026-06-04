@@ -155,7 +155,7 @@ function Identity() {
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
         <div className="grid items-end gap-12 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-6">
-            <p className="eyebrow">Benvenuti al RPC</p>
+            <p className="eyebrow">Benvenuti al RONDINELLA PADEL CLUB</p>
             <h2 className="mt-6 font-display text-4xl font-black uppercase leading-[1] tracking-tight md:text-7xl">
               Un club fatto
               <br />
@@ -168,13 +168,12 @@ function Identity() {
           </div>
           <div className="md:col-span-5 md:col-start-8">
             <p className="text-base leading-relaxed text-foreground/85 md:text-lg">
-              Il Rondinella Padel Club è uno sport club di Firenze dedicato al padel. Quattro campi
-              coperti, maestri federali e un calendario di corsi e lezioni pensati per
+              Il Rondinella Padel Club è un circolo di Firenze dedicato al padel. Quattro campi
+              coperti, maestri FITP e un calendario di corsi e lezioni pensati per
               ogni livello, dai principianti agli agonisti.
             </p>
             <p className="mt-5 text-base leading-relaxed text-foreground/70 md:text-lg">
-              Nessuna iscrizione obbligatoria, nessun livello minimo. Prenoti, vieni,
-              giochi.
+              {" "}
             </p>
 
             <Link
