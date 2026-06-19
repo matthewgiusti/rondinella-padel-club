@@ -79,7 +79,7 @@ export const Route = createFileRoute("/servizi")({
               name: "I campi da padel sono coperti?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sì: 3 campi sono totalmente coperti e 1 è semi-coperto, così si gioca tutto l'anno con qualsiasi condizione meteo.",
+                text: "Sì: tutti i 4 campi sono coperti, così si gioca tutto l'anno con qualsiasi condizione meteo.",
               },
             },
             {
@@ -113,7 +113,7 @@ const services = [
     icon: LayoutGrid,
     t: "Prenotazione campi",
     k: "Campo da padel coperto a Firenze",
-    d: "Quattro campi (3 coperti + 1 semi-coperto), erba sintetica professionale e illuminazione LED. Prenoti, vieni, giochi — tutto l'anno.",
+    d: "Quattro campi coperti, erba sintetica professionale e illuminazione LED. Prenoti, vieni, giochi — tutto l'anno.",
     to: "/contatti" as const,
   },
   {

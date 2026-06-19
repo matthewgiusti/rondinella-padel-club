@@ -71,7 +71,7 @@ function ClubPage() {
           <div className="mt-20 grid gap-px bg-border md:grid-cols-4">
             {[
               ["04", "Campi totali"],
-              ["03", "Coperti"],
+              ["04", "Coperti"],
               ["03", "Maestri FITP"],
               ["7/7", "Giorni aperti"],
             ].map(([n, l]) => (
@@ -111,7 +111,7 @@ function ClubPage() {
               </h2>
               <ul className="mt-10 space-y-5 text-sm text-foreground/85">
                 {[
-                  "3 campi indoor + 1 campo semi-coperto",
+                  "4 campi coperti",
                   "Spogliatoi maschili e femminili con docce",
                   "Bar interno al circolo",
                   "Ristorante all'interno del complesso sportivo",
