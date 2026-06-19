@@ -263,7 +263,7 @@ function Courts() {
               .
             </h2>
             <p className="mt-8 text-base leading-relaxed text-foreground/80">
-              Tre campi totalmente coperti e uno semi-coperto: che piova, che faccia
+              Quattro campi coperti: che piova, che faccia
               caldo, che sia gennaio o ferragosto — qui si gioca. Erba sintetica
               professionale, illuminazione LED, vetri temperati.
             </p>
