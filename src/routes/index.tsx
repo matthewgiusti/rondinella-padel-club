@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "4 campi (3 coperti + 1 semi-coperto), corsi, wheelchair padel, tornei FITP. Il club di padel di Firenze, in Via Edoardo Detti.",
+          "4 campi coperti, corsi, wheelchair padel, tornei FITP. Il club di padel di Firenze, in Via Edoardo Detti.",
       },
       { property: "og:title", content: "Rondinella Padel Club — Firenze" },
       { property: "og:url", content: "/" },
@@ -102,7 +102,7 @@ function Hero() {
         <div className="mt-16 grid max-w-3xl grid-cols-2 gap-x-10 gap-y-6 border-t border-border pt-8 sm:grid-cols-4">
           {[
             ["04", "Campi"],
-            ["03", "Coperti"],
+            ["04", "Coperti"],
             ["FITP", "Maestri certificati"],
             ["7/7", "Aperti tutti i giorni"],
           ].map(([n, l]) => (
@@ -195,7 +195,7 @@ function Pillars() {
     {
       icon: Heart,
       t: "Campi sempre coperti",
-      d: "Tre campi indoor e uno semi-coperto: si gioca tutto l'anno, con qualsiasi tempo.",
+      d: "Quattro campi coperti: si gioca tutto l'anno, con qualsiasi tempo.",
     },
     {
       icon: Users,
@@ -263,14 +263,14 @@ function Courts() {
               .
             </h2>
             <p className="mt-8 text-base leading-relaxed text-foreground/80">
-              Tre campi totalmente coperti e uno semi-coperto: che piova, che faccia
+              Quattro campi coperti: che piova, che faccia
               caldo, che sia gennaio o ferragosto — qui si gioca. Erba sintetica
               professionale, illuminazione LED, vetri temperati.
             </p>
             <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-border pt-8 text-sm">
               {[
-                ["Coperti", "3 indoor"],
-                ["Semi-coperto", "1 outdoor"],
+                ["Coperti", "4 indoor"],
+                ["Superficie", "Erba sintetica professionale"],
                 ["Spogliatoi", "M / F separati"],
                 ["Servizi", "Bar interno + parcheggio"],
               ].map(([k, v]) => (

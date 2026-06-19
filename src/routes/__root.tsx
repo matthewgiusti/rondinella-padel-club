@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Padel a Firenze: 4 campi (3 coperti + 1 semi-coperto), corsi e lezioni per tutti i livelli, wheelchair padel e tornei FITP. In Via Edoardo Detti, Firenze.",
+          "Padel a Firenze: 4 campi coperti, corsi e lezioni per tutti i livelli, wheelchair padel e tornei FITP. In Via Edoardo Detti, Firenze.",
       },
       { property: "og:title", content: "Rondinella Padel Club — Firenze" },
       {
@@ -126,7 +126,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "Rondinella Padel Club",
           alternateName: "RPC — Rondinella Padel Club",
           description:
-            "Club di padel a Firenze: 4 campi (3 coperti + 1 semi-coperto), corsi e lezioni per tutti i livelli, wheelchair padel e tornei FITP.",
+            "Club di padel a Firenze: 4 campi coperti, corsi e lezioni per tutti i livelli, wheelchair padel e tornei FITP.",
           sport: "Padel",
           telephone: "+393293712615",
           email: "info@rondinellapadelclub.it",
