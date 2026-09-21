@@ -32,7 +32,7 @@ function CoursesPage() {
         eyebrow="Corsi & Lezioni"
         title="Iniziare è facile."
         italicWord="Migliorare anche."
-        description="Tre maestri FITP, gruppi piccoli, un metodo costruito per farti tornare. Dal primo colpo al gioco di coppia, senza fretta e senza giudizio."
+        description="Tre maestri FITP e gruppi piccoli: si impara sul serio, ma soprattutto ci si diverte. Dal primo colpo al gioco di coppia, senza fretta e senza giudizio."
         image={lessonsImg}
       />
 
@@ -52,7 +52,7 @@ function CoursesPage() {
               {
                 t: "Corsi stagionali",
                 m: "Settembre → giugno",
-                d: "Percorso continuativo in piccolo gruppo, con appuntamento fisso settimanale. Disponibile anche il corso agonisti per chi vuole spingersi oltre.",
+                d: "Percorso continuativo in piccolo gruppo, con appuntamento fisso settimanale. Disponibile anche il corso agonisti, per chi vuole allenarsi sul serio.",
               },
               {
                 t: "Lezioni con maestro",
@@ -62,7 +62,7 @@ function CoursesPage() {
               {
                 t: "Pacchetti lezioni",
                 m: "5 · 10 · 15 lezioni",
-                d: "Più lezioni con continuità, da 1 a 4 persone. Lo stesso maestro, lo stesso ritmo, miglioramenti che si vedono.",
+                d: "Più lezioni con continuità, da 1 a 4 persone. Stesso maestro, stesso ritmo, settimana dopo settimana.",
               },
               {
                 t: "Partite guidate",

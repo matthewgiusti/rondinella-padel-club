@@ -71,8 +71,7 @@ function Hero() {
         </h1>
         <p className="mt-8 max-w-xl text-base leading-relaxed text-foreground/85 animate-fade-up md:text-lg">
           Il padel come ti piace: quattro campi coperti, tre maestri FITP e lezioni per
-          ogni livello. Per chi gioca da sempre e per chi non ha mai tenuto in mano una
-          pala.
+          ogni livello, dai primi colpi alle partite vere.
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row animate-fade-up">
@@ -194,7 +193,7 @@ function Pillars() {
     {
       icon: Users,
       t: "Per tutti i livelli",
-      d: "Hai 18 o 65 anni? Hai giocato a tennis o non hai mai preso una pala? Ti troviamo il campo giusto.",
+      d: "Qui giocano diciottenni e over 60, ex tennisti e chi non ha mai preso una pala in vita sua: ognuno al suo livello.",
     },
     {
       icon: GraduationCap,
@@ -257,9 +256,9 @@ function Courts() {
               .
             </h2>
             <p className="mt-8 text-base leading-relaxed text-foreground/80">
-              Quattro campi coperti: che piova, che faccia
-              caldo, che sia gennaio o ferragosto — qui si gioca. Erba sintetica
-              professionale, illuminazione LED, vetri temperati.
+              Quattro campi coperti, aperti tutto l'anno: con qualsiasi tempo e in
+              qualsiasi stagione si gioca lo stesso. Erba sintetica professionale,
+              illuminazione LED, vetri temperati.
             </p>
             <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-border pt-8 text-sm">
               {[
@@ -377,7 +376,7 @@ function Lessons() {
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent" />
           <div className="absolute inset-0 flex items-center px-5 md:px-16">
             <p className="max-w-lg font-serif text-2xl italic leading-snug text-foreground md:text-4xl">
-              "Insegniamo a giocare. Ma soprattutto a divertirsi giocando."
+              "Insegniamo a giocare, ma prima di tutto a divertirsi."
               <span className="mt-4 block text-xs not-italic uppercase tracking-[0.22em] text-brand">
                 — I maestri RPC
               </span>
@@ -406,8 +405,8 @@ function Wheelchair() {
               .
             </h2>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-foreground/80 md:text-lg">
-              Al RPC il Wheelchair non è un'attività extra: è parte del
-              club. Campi accessibili, istruttori formati, gruppi misti e un calendario
+              Al RPC il Wheelchair è parte del club a tutti gli effetti: campi
+              accessibili, istruttori formati, gruppi misti e un calendario
               dedicato. Vieni a provare, da solo o con un amico.
             </p>
             <Link

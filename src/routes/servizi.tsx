@@ -113,7 +113,7 @@ const services = [
     icon: LayoutGrid,
     t: "Prenotazione campi",
     k: "Campo da padel coperto a Firenze",
-    d: "Quattro campi coperti, erba sintetica professionale e illuminazione LED. Prenoti, vieni, giochi — tutto l'anno.",
+    d: "Quattro campi coperti, erba sintetica professionale, illuminazione LED: si gioca tutto l'anno, con qualsiasi tempo.",
     to: "/contatti" as const,
   },
   {
@@ -134,7 +134,7 @@ const services = [
     icon: CalendarRange,
     t: "Tornei & Eventi",
     k: "Tornei sociali e FITP",
-    d: "Tornei sociali e competizioni FITP, momenti di comunità e socialità dentro e fuori dal campo.",
+    d: "Tornei sociali e competizioni FITP, per giocare sul serio e ritrovarsi dopo la partita.",
     to: "/club" as const,
   },
 ];

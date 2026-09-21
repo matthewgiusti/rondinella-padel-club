@@ -55,13 +55,12 @@ function WheelchairPage() {
               <p>
                 Dal <strong className="font-semibold text-foreground">settembre 2023</strong>,
                 con il Progetto Wheelchair abbiamo aperto le porte del padel alle persone
-                con disabilità motoria, convinti che questo sport possa abbattere ogni
-                barriera. Si gioca sugli stessi campi del padel tradizionale, con regole
-                leggermente adattate.
+                con disabilità motoria. Si gioca sugli stessi campi del padel
+                tradizionale, con regole leggermente adattate.
               </p>
               <p className="text-foreground/70">
-                Organizziamo lezioni individuali, sessioni di gruppo e partite miste —
-                perché giocare insieme è il punto. I campi sono accessibili dall'ingresso
+                Organizziamo lezioni individuali, sessioni di gruppo e partite miste,
+                perché il bello è giocare insieme. I campi sono accessibili dall'ingresso
                 fino agli spogliatoi e mettiamo a disposizione carrozzine da padel
                 dedicate, in prova per chi vuole iniziare senza attrezzatura propria.
                 Insieme a ConsorzioBlu e al Gruppo Sportivo Unità Spinale accompagniamo
@@ -141,9 +140,10 @@ function WheelchairPage() {
             .
           </h2>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
-            In pochi anni il Progetto Wheelchair è cresciuto come esperienza di
-            inclusione attraverso lo sport. Vogliamo continuare a crescere insieme,
-            perché il padel sia davvero uno sport per tutti.
+            In pochi anni il Progetto Wheelchair è cresciuto: più giocatori, più
+            tornei, più persone che si avvicinano al padel in carrozzina per la prima
+            volta. Vogliamo continuare così, perché il padel sia davvero uno sport per
+            tutti.
           </p>
 
           <div className="mt-14 grid gap-px bg-border md:grid-cols-3">
@@ -179,8 +179,8 @@ function WheelchairPage() {
                 .
               </h2>
               <p className="mt-8 text-base leading-relaxed text-foreground/75">
-                Il Progetto Wheelchair esiste grazie alla collaborazione con realtà
-                che credono nello sport come strumento di inclusione e aggregazione.
+                Il Progetto Wheelchair esiste grazie a chi ci sostiene: associazioni,
+                aziende e club che hanno creduto nel progetto fin dall'inizio.
               </p>
             </div>
             <div className="md:col-span-7">

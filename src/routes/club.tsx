@@ -57,11 +57,11 @@ function ClubPage() {
                 livello.
               </p>
               <p className="text-foreground/70">
-                Non serve essere giocatori esperti né avere un'attrezzatura propria.
-                Principianti, intermedi e agonisti trovano qui campi sempre giocabili,
-                corsi su misura e maestri certificati. Intorno alla struttura trovi
-                tutto il necessario: bar e ristorante interni, parcheggio ampio nelle
-                vicinanze e un centro commerciale a pochi minuti.
+                Chi viene qui parte da dove si trova: principianti, intermedi e agonisti
+                giocano tutti su campi sempre pronti, con corsi su misura e maestri
+                certificati. Intorno alla struttura trovi tutto il necessario: bar e
+                ristorante interni, parcheggio ampio nelle vicinanze e un centro
+                commerciale a pochi minuti.
               </p>
             </div>
           </div>
@@ -188,9 +188,9 @@ function ClubPage() {
             .
           </h2>
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-foreground/75 md:text-lg">
-            Tutti e tre certificati FITP, tutti e tre alla pari: scegli il maestro o
-            l'orario che preferisci, l'approccio è lo stesso. Tecnica seria e metodo
-            accessibile, dal primo colpo al gioco di coppia.
+            Tutti e tre certificati FITP e alla pari: scegli il maestro o l'orario che
+            preferisci, il metodo non cambia. Tecnica seria, approccio accessibile, dal
+            primo colpo al gioco di coppia.
           </p>
 
           <div className="mt-12 grid gap-8 md:grid-cols-3">
@@ -205,7 +205,7 @@ function ClubPage() {
               },
               {
                 n: "Nicola Manfredini",
-                d: "Maestro FITP. Cura percorsi individuali e di gruppo, accompagnando ogni allievo nel suo percorso.",
+                d: "Maestro FITP. Segue gruppi e singoli, dai primi passi in campo fino all'agonismo.",
               },
             ].map((p) => (
               <article
