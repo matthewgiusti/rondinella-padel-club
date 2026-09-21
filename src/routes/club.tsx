@@ -63,8 +63,6 @@ function ClubPage() {
                 tutto il necessario: bar e ristorante interni, parcheggio ampio nelle
                 vicinanze e un centro commerciale a pochi minuti.
               </p>
-
-
             </div>
           </div>
 
@@ -224,7 +222,6 @@ function ClubPage() {
               </article>
             ))}
           </div>
-
         </div>
       </section>
 
@@ -243,7 +240,6 @@ function ClubPage() {
           <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.22em]">
             — Rondinella Padel Club
           </p>
-
         </div>
       </section>
     </PageShell>

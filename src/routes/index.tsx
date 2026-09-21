@@ -37,7 +37,6 @@ function HomePage() {
       <Courts />
       <Lessons />
       <Wheelchair />
-      
       <Testimonials />
       <WhatsAppCTA />
       <Visit />
@@ -75,7 +74,6 @@ function Hero() {
           ogni livello. Per chi gioca da sempre e per chi non ha mai tenuto in mano una
           pala.
         </p>
-
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row animate-fade-up">
           <a
@@ -172,10 +170,6 @@ function Identity() {
               coperti, maestri FITP e un calendario di corsi e lezioni pensati per
               ogni livello, dai principianti agli agonisti.
             </p>
-            <p className="mt-5 text-base leading-relaxed text-foreground/70 md:text-lg">
-              {" "}
-            </p>
-
             <Link
               to="/club"
               className="mt-8 inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-brand"
@@ -432,7 +426,6 @@ function Wheelchair() {
                 — Wheelchair · RPC
               </p>
             </div>
-
           </div>
         </div>
       </div>
@@ -608,7 +601,6 @@ function Visit() {
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>

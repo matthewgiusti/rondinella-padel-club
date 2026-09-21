@@ -142,7 +142,6 @@ function CoursesPage() {
         </div>
       </section>
 
-
       <section className="border-t border-border bg-surface py-24 md:py-32">
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <div className="grid gap-16 md:grid-cols-12">

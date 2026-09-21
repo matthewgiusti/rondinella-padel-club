@@ -242,7 +242,6 @@ function ContactPage() {
             </div>
           </div>
         </div>
-
       </section>
     </PageShell>
   );

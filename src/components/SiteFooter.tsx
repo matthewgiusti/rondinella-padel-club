@@ -5,7 +5,6 @@ import { Instagram, MessageCircle, MapPin, Mail, Phone } from "lucide-react";
 const WHATSAPP =
   "https://wa.me/393293712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
-
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
@@ -37,7 +36,6 @@ export function SiteFooter() {
               >
                 <Instagram size={18} />
               </a>
-
             </div>
           </div>
 
@@ -89,7 +87,6 @@ export function SiteFooter() {
               </li>
             </ul>
           </div>
-
         </div>
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-border pt-8 text-[11px] uppercase tracking-[0.2em] text-muted-foreground md:flex-row md:items-center">

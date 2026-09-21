@@ -67,7 +67,6 @@ function WheelchairPage() {
                 Insieme a ConsorzioBlu e al Gruppo Sportivo Unità Spinale accompagniamo
                 anche chi vuole arrivare all'agonismo.
               </p>
-
             </div>
           </div>
         </div>
@@ -207,7 +206,6 @@ function WheelchairPage() {
           </div>
         </div>
       </section>
-
 
       <section className="border-t border-border bg-background">
         <div className="grid md:grid-cols-2">
