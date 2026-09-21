@@ -122,7 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": ["SportsActivityLocation", "SportsClub"],
-          "@id": "https://rondinella-padel-club.lovable.app/#organization",
+          "@id": "https://rondinellapadelclub.it/#organization",
           name: "Rondinella Padel Club",
           alternateName: "RPC — Rondinella Padel Club",
           description:
@@ -130,9 +130,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           sport: "Padel",
           telephone: "+393293712615",
           email: "info@rondinellapadelclub.it",
-          url: "https://rondinella-padel-club.lovable.app",
-          image: "https://rondinella-padel-club.lovable.app/favicon.jpg",
-          logo: "https://rondinella-padel-club.lovable.app/favicon.jpg",
+          url: "https://rondinellapadelclub.it",
+          image: "https://rondinellapadelclub.it/favicon.jpg",
+          logo: "https://rondinellapadelclub.it/favicon.jpg",
           priceRange: "€€",
           currenciesAccepted: "EUR",
           areaServed: [
@@ -216,7 +216,43 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           ],
         }),
       },
+      // iubenda cookie consent (Privacy Controls and Cookie Solution) — must load
+      // before any gated tracking script below. siteId/cookiePolicyId are the same
+      // ones already live on rondinellapadelclub.it (WordPress).
       {
+        children: `var _iub = _iub || [];
+_iub.csConfiguration = {
+  siteId: 3351672,
+  cookiePolicyId: 87531025,
+  lang: "it",
+  perPurposeConsent: true,
+  countryDetection: true,
+  banner: {
+    acceptButtonDisplay: true,
+    rejectButtonDisplay: true,
+    customizeButtonDisplay: true,
+    explicitWithdrawal: true,
+    position: "float-bottom-center",
+    style: "dark"
+  }
+};`,
+      },
+      {
+        src: "https://cs.iubenda.com/cookie-solution/confs/87531025.js",
+        async: true,
+      },
+      {
+        src: "https://cdn.iubenda.com/cs/iubenda_cs.js",
+        charset: "UTF-8",
+        async: true,
+      },
+      // Meta Pixel — blocked by iubenda until consent for purpose 5 (Marketing).
+      // iubenda activates any `type="text/plain"` script tagged `_iub_cs_activate`
+      // once the matching purpose is accepted (see data-iub-purposes).
+      {
+        type: "text/plain",
+        class: "_iub_cs_activate",
+        "data-iub-purposes": "5",
         children: `!function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -228,11 +264,18 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 fbq('init', '${META_PIXEL_ID}');
 fbq('track', 'PageView');`,
       },
+      // GA4 — blocked by iubenda until consent for purpose 4 (Measurement).
       {
         src: `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`,
         async: true,
+        type: "text/plain",
+        class: "_iub_cs_activate",
+        "data-iub-purposes": "4",
       },
       {
+        type: "text/plain",
+        class: "_iub_cs_activate",
+        "data-iub-purposes": "4",
         children: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
@@ -254,15 +297,6 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            alt=""
-            src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
-          />
-        </noscript>
         {children}
         <Scripts />
       </body>

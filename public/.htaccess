@@ -1,0 +1,16 @@
+# Rondinella Padel Club — static site
+# Canonical host + HTTPS enforcement, plus redirects from the old WordPress URLs.
+
+RewriteEngine On
+
+# Force canonical host (no www)
+RewriteCond %{HTTP_HOST} ^www\.rondinellapadelclub\.it$ [NC]
+RewriteRule ^(.*)$ https://rondinellapadelclub.it/$1 [L,R=301]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+# Old WordPress pages -> new equivalent pages
+RewriteRule ^lezioni/?$ /corsi/ [R=301,L]
+RewriteRule ^prezzi/?$ /servizi/ [R=301,L]

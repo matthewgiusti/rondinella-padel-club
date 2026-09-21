@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://rondinellapadelclub.it/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://rondinellapadelclub.it/club</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rondinellapadelclub.it/corsi</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rondinellapadelclub.it/servizi</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rondinellapadelclub.it/wheelchair</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rondinellapadelclub.it/contatti</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>

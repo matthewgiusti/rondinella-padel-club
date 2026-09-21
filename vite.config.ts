@@ -6,10 +6,12 @@
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-// @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
+// Static export for Hostinger: prerender every route to plain HTML at build time.
+// The Cloudflare plugin is disabled because its worker-shaped server output isn't
+// what the prerenderer expects, and we no longer deploy to Cloudflare Workers.
 export default defineConfig({
+  cloudflare: false,
   tanstackStart: {
-    server: { entry: "server" },
+    prerender: { enabled: true },
   },
 });
