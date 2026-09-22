@@ -2,7 +2,7 @@ import { MapPin, Navigation, Car } from "lucide-react";
 
 /* Rondinella Padel Club — Via Edoardo Detti, 23, 50143 Firenze (FI) */
 export const CLUB_ADDRESS = "Via Edoardo Detti, 23, 50143 Firenze (FI)";
-export const CLUB_GEO = { lat: 43.7985, lng: 11.2255 };
+export const CLUB_GEO = { lat: 43.7649047, lng: 11.195569 };
 
 const DEST_QUERY = encodeURIComponent(
   "Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze",
