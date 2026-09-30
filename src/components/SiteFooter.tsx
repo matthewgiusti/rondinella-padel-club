@@ -5,6 +5,16 @@ import { Instagram, MessageCircle, MapPin, Mail, Phone } from "lucide-react";
 const WHATSAPP =
   "https://wa.me/393293712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
+// Policy ospitate da iubenda (stesso cookiePolicyId del banner in __root.tsx).
+const PRIVACY_POLICY = "https://www.iubenda.com/privacy-policy/87531025";
+const COOKIE_POLICY = "https://www.iubenda.com/privacy-policy/87531025/cookie-policy";
+
+declare global {
+  interface Window {
+    _iub?: { cs?: { api?: { openPreferences?: () => void } } };
+  }
+}
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
@@ -93,6 +103,38 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} Rondinella Padel Club · Firenze</p>
           <p>P.IVA 07188890482</p>
         </div>
+
+        <nav
+          aria-label="Informazioni legali"
+          className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[11px] uppercase tracking-[0.2em] text-muted-foreground"
+        >
+          <a
+            href={PRIVACY_POLICY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="iubenda-nostyle iubenda-noiframe iubenda-embed hover:text-brand"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href={COOKIE_POLICY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="iubenda-nostyle iubenda-noiframe iubenda-embed hover:text-brand"
+          >
+            Cookie Policy
+          </a>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window._iub?.cs?.api?.openPreferences?.();
+            }}
+            className="iubenda-cs-preferences-link hover:text-brand"
+          >
+            Gestisci preferenze cookie
+          </a>
+        </nav>
       </div>
     </footer>
   );

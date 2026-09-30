@@ -216,6 +216,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           ],
         }),
       },
+      // Google Consent Mode v2 — default everything to "denied" before any Google tag
+      // or the iubenda banner runs. Updated to "granted" by the iubenda callback below
+      // (and by the gated GA4 snippet) once the user gives consent.
+      {
+        children: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  functionality_storage: 'denied',
+  personalization_storage: 'denied',
+  security_storage: 'granted',
+  wait_for_update: 500
+});
+gtag('set', 'ads_data_redaction', true);`,
+      },
       // iubenda cookie consent (Privacy Controls and Cookie Solution) — must load
       // before any gated tracking script below. siteId/cookiePolicyId are the same
       // ones already live on rondinellapadelclub.it (WordPress).
@@ -234,6 +252,20 @@ _iub.csConfiguration = {
     explicitWithdrawal: true,
     position: "float-bottom-center",
     style: "dark"
+  },
+  callback: {
+    onPreferenceExpressedOrNotNeeded: function (preference) {
+      var p = (preference && preference.purposes) || {};
+      var g = function (v) { return v ? 'granted' : 'denied'; };
+      gtag('consent', 'update', {
+        analytics_storage: g(p[4]),
+        ad_storage: g(p[5]),
+        ad_user_data: g(p[5]),
+        ad_personalization: g(p[5]),
+        functionality_storage: g(p[2]),
+        personalization_storage: g(p[3])
+      });
+    }
   }
 };`,
       },
@@ -278,6 +310,7 @@ fbq('track', 'PageView');`,
         "data-iub-purposes": "4",
         children: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'update', { analytics_storage: 'granted' });
 gtag('js', new Date());
 gtag('config', '${GA4_MEASUREMENT_ID}');`,
       },
