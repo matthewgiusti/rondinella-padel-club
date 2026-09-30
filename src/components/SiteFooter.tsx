@@ -6,8 +6,8 @@ const WHATSAPP =
   "https://wa.me/393293712615?text=Ciao%20Rondinella%2C%20vorrei%20informazioni";
 
 // Policy ospitate da iubenda (stesso cookiePolicyId del banner in __root.tsx).
-const PRIVACY_POLICY = "https://www.iubenda.com/privacy-policy/87531025";
-const COOKIE_POLICY = "https://www.iubenda.com/privacy-policy/87531025/cookie-policy";
+const PRIVACY_POLICY = "https://www.iubenda.com/privacy-policy/54218150";
+const COOKIE_POLICY = "https://www.iubenda.com/privacy-policy/54218150/cookie-policy";
 
 declare global {
   interface Window {

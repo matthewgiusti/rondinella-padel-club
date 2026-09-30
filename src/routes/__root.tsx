@@ -235,23 +235,26 @@ gtag('consent', 'default', {
 gtag('set', 'ads_data_redaction', true);`,
       },
       // iubenda cookie consent (Privacy Controls and Cookie Solution) — must load
-      // before any gated tracking script below. siteId/cookiePolicyId are the same
-      // ones already live on rondinellapadelclub.it (WordPress).
+      // before any gated tracking script below. siteId/cookiePolicyId come from the
+      // iubenda dashboard of rondinellapadelclub.it.
       {
         children: `var _iub = _iub || [];
 _iub.csConfiguration = {
-  siteId: 3351672,
-  cookiePolicyId: 87531025,
+  siteId: 3351651,
+  cookiePolicyId: 54218150,
   lang: "it",
+  askConsentAtCookiePolicyUpdate: true,
   perPurposeConsent: true,
-  countryDetection: true,
+  whitelabel: false,
+  floatingPreferencesButtonDisplay: "bottom-right",
   banner: {
     acceptButtonDisplay: true,
     rejectButtonDisplay: true,
+    closeButtonRejects: true,
     customizeButtonDisplay: true,
     explicitWithdrawal: true,
-    position: "float-bottom-center",
-    style: "dark"
+    listPurposes: true,
+    position: "float-top-center"
   },
   callback: {
     onPreferenceExpressedOrNotNeeded: function (preference) {
@@ -268,10 +271,6 @@ _iub.csConfiguration = {
     }
   }
 };`,
-      },
-      {
-        src: "https://cs.iubenda.com/cookie-solution/confs/87531025.js",
-        async: true,
       },
       {
         src: "https://cdn.iubenda.com/cs/iubenda_cs.js",

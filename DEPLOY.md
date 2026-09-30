@@ -44,7 +44,7 @@ Non serve configurare altro lato Hostinger per questi redirect.
 
 ## 6. iubenda — verifica il dominio autorizzato
 
-L'integrazione cookie usa lo stesso account iubenda già configurato sul sito WordPress (siteId 3351672, cookiePolicyId 87531025). Se nel pannello iubenda il dominio autorizzato è specificamente `www.rondinellapadelclub.it` (con www) invece di quello canonico, potrebbe essere necessario aggiungerlo/aggiornarlo da Iubenda → Impostazioni sito, altrimenti il banner potrebbe non caricarsi. Verificalo dopo il primo caricamento.
+L'integrazione cookie usa lo stesso account iubenda già configurato sul sito WordPress (siteId 3351651, cookiePolicyId 54218150). Se nel pannello iubenda il dominio autorizzato è specificamente `www.rondinellapadelclub.it` (con www) invece di quello canonico, potrebbe essere necessario aggiungerlo/aggiornarlo da Iubenda → Impostazioni sito, altrimenti il banner potrebbe non caricarsi. Verificalo dopo il primo caricamento.
 
 ## 7. Test dopo la pubblicazione
 
