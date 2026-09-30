@@ -7,8 +7,8 @@
 /* Rondinella Padel Club — sporty, warm, community-driven design system */
 
 @theme inline {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Archivo", "Inter", sans-serif;
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo", "DM Sans", sans-serif;
   --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
 
   --radius-sm: 2px;
